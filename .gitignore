@@ -1,0 +1,6 @@
+notebooks/
+protenv/
+local_scripts/
+evaluate_results/
+**/**/local_*
+*.png
