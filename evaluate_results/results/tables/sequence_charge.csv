@@ -1,0 +1,27 @@
+Skup sekvenci;Minimalni prosjek naboja aminokiseline u sekvenci;Maksimalni prosjek naboja aminokiseline u sekvenci;Prosjek prosjeka naboja aminokiseline u sekvenci;Standardna devijacija
+Varijante za osnovni MSA-VAE model;-0,025352;0,002809;-0,009455;0,004303
+Varijante za MSA-VAE model niske topljivosti;0,0;0,019499;0,011639;0,003046
+Varijante za MSA-VAE model srednje topljivosti;-0,002801;0,019553;0,008726;0,002579
+Varijante za MSA-VAE model visoke topljivosti;-0,025352;-0,014085;-0,020197;0,001348
+Uzorci za osnovni MSA-VAE model;-0,137931;0,155172;0,004111;0,031938
+Uzorci za MSA-VAE model niske topljivosti;-0,103704;0,142857;0,01181;0,033816
+Uzorci za MSA-VAE model srednje topljivosti;-0,093923;0,125;0,008401;0,031249
+Uzorci za MSA-VAE model visoke topljivosti;-0,108696;0,130769;-0,003941;0,030526
+Varijante za osnovni AR-VAE model;-0,014085;0,027855;0,005716;0,006222
+Varijante za AR-VAE model niske topljivosti;-0,016667;0,043573;0,009451;0,008075
+Varijante za AR-VAE model srednje topljivosti;-0,016901;0,025352;0,005625;0,007498
+Varijante za AR-VAE model visoke topljivosti;-0,03662;0,00565;-0,015367;0,008335
+Uzorci za osnovni AR-VAE model;-0,080247;0,081433;-0,006806;0,021059
+Uzorci za AR-VAE model niske topljivosti;-0,050167;0,088235;0,011145;0,019722
+Uzorci za AR-VAE model srednje topljivosti;-0,103352;0,122034;0,00232;0,023421
+Uzorci za AR-VAE model visoke topljivosti;-0,115274;0,048485;-0,024331;0,023036
+Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;-0,002817;0,014085;0,007368;0,003225
+Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;-0,008451;0,014085;0,005638;0,004181
+Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;-0,030986;0,008451;-0,013753;0,006728
+Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;-0,013889;0,022222;0,006201;0,006331
+Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;-0,022284;0,022284;0,000701;0,00673
+Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;-0,030641;0,016713;-0,008193;0,007458
+Profil obitelji luciferaza;-0,177419;0,177632;0,000449;0,020977
+Skup podataka za validaciju;-0,062893;0,148052;0,00235;0,016888
+Skup podataka za treniranje;-0,073171;0,202055;0,003256;0,01663
+Skup podataka za treniranje i validaciju;-0,073171;0,202055;0,003073;0,016687

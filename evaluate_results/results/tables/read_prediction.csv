@@ -1,0 +1,27 @@
+Skup sekvenci;Minimalna topljivost;Maksimalna topljivost;Prosjek topljivosti;Standardna devijacija
+Varijante za osnovni MSA-VAE model;0,41;0,537;0,498;0,024
+Varijante za MSA-VAE model niske topljivosti;0,283;0,394;0,317;0,018
+Varijante za MSA-VAE model srednje topljivosti;0,283;0,443;0,352;0,019
+Varijante za MSA-VAE model visoke topljivosti;0,52;0,536;0,528;0,001
+Uzorci za osnovni MSA-VAE model;0,171;0,826;0,505;0,109
+Uzorci za MSA-VAE model niske topljivosti;0,15;0,823;0,451;0,115
+Uzorci za MSA-VAE model srednje topljivosti;0,166;0,803;0,502;0,098
+Uzorci za MSA-VAE model visoke topljivosti;0,244;0,888;0,558;0,095
+Varijante za osnovni AR-VAE model;0,282;0,518;0,392;0,043
+Varijante za AR-VAE model niske topljivosti;0,134;0,461;0,296;0,049
+Varijante za AR-VAE model srednje topljivosti;0,261;0,538;0,413;0,052
+Varijante za AR-VAE model visoke topljivosti;0,38;0,558;0,513;0,027
+Uzorci za osnovni AR-VAE model;0,137;0,722;0,455;0,092
+Uzorci za AR-VAE model niske topljivosti;0,052;0,643;0,337;0,091
+Uzorci za AR-VAE model srednje topljivosti;0,211;0,776;0,461;0,084
+Uzorci za AR-VAE model visoke topljivosti;0,241;0,782;0,561;0,076
+Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;0,321;0,457;0,38;0,025
+Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;0,313;0,494;0,386;0,035
+Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;0,391;0,611;0,517;0,039
+Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;0,303;0,564;0,432;0,048
+Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;0,347;0,579;0,486;0,042
+Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;0,406;0,582;0,524;0,027
+Profil obitelji luciferaza;0,079;0,919;0,454;0,114
+Skup podataka za validaciju;0,045;0,747;0,403;0,119
+Skup podataka za treniranje;0,02;0,766;0,391;0,115
+Skup podataka za treniranje i validaciju;0,02;0,766;0,393;0,116

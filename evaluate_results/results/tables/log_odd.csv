@@ -1,0 +1,27 @@
+Skup sekvenci;Minimalna vjerojatnost srodnosti sekvenci (postotak);Maksimalna vjerojatnost srodnosti sekvenci (postotak);Prosjek vjerojatnosti srodnosti sekvenci (postotak);Standardna devijacija
+Varijante za osnovni MSA-VAE model;100,0;100,0;100,0;0,0
+Varijante za MSA-VAE model niske topljivosti;100,0;100,0;100,0;0,0
+Varijante za MSA-VAE model srednje topljivosti;100,0;100,0;100,0;0,0
+Varijante za MSA-VAE model visoke topljivosti;100,0;100,0;100,0;0,0
+Uzorci za osnovni MSA-VAE model;0,0;100,0;2,967;16,777
+Uzorci za MSA-VAE model niske topljivosti;0,0;100,0;4,238;19,763
+Uzorci za MSA-VAE model srednje topljivosti;0,0;100,0;2,18;14,273
+Uzorci za MSA-VAE model visoke topljivosti;0,0;100,0;2,345;14,876
+Varijante za osnovni AR-VAE model;100,0;100,0;100,0;0,0
+Varijante za AR-VAE model niske topljivosti;100,0;100,0;100,0;0,0
+Varijante za AR-VAE model srednje topljivosti;100,0;100,0;100,0;0,0
+Varijante za AR-VAE model visoke topljivosti;100,0;100,0;100,0;0,0
+Uzorci za osnovni AR-VAE model;0,0;100,0;87,714;32,538
+Uzorci za AR-VAE model niske topljivosti;0,0;100,0;99,777;4,558
+Uzorci za AR-VAE model srednje topljivosti;0,0;100,0;99,79;4,401
+Uzorci za AR-VAE model visoke topljivosti;0,0;100,0;97,097;16,399
+Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;100,0;100,0;100,0;0,0
+Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;100,0;100,0;100,0;0,0
+Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;100,0;100,0;100,0;0,0
+Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;100,0;100,0;100,0;0,0
+Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;100,0;100,0;100,0;0,0
+Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;100,0;100,0;100,0;0,0
+Profil obitelji luciferaza;0,0;100,0;2,755;16,346
+Skup podataka za validaciju;0,0;100,0;0,865;9,081
+Skup podataka za treniranje;0,0;100,0;1,84;12,927
+Skup podataka za treniranje i validaciju;0,0;100,0;0,055;2,341

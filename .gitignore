@@ -1,6 +1,8 @@
 notebooks/
 protenv/
 local_scripts/
-evaluate_results/
+*_val*
+*_train*
+*PF00296*
 **/**/local_*
 *.png
