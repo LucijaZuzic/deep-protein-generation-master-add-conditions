@@ -1,8 +1,5 @@
 notebooks/
 protenv/
 local_scripts/
-*_val*
-*_train*
-*PF00296*
 **/**/local_*
 *.png

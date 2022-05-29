@@ -1,0 +1,5 @@
+evaluate_results/sequences/lines_merged/lines_merged_PF00296_full.txt filter=lfs diff=lfs merge=lfs -text
+evaluate_results/sequences/seq_prediction/seq_prediction_ll_train.txt filter=lfs diff=lfs merge=lfs -text
+evaluate_results/sequences/aligned_sequences/PF00296_full.txt filter=lfs diff=lfs merge=lfs -text
+evaluate_results/sequences/seq_prediction/seq_prediction_PF00296_full.txt filter=lfs diff=lfs merge=lfs -text
+evaluate_results/sequences/seq_prediction/seq_prediction_ll_val.txt filter=lfs diff=lfs merge=lfs -text 
