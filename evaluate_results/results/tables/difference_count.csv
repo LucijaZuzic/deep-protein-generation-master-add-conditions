@@ -1,0 +1,27 @@
+Skup sekvenci;Minimalni broj mutacija u sekvenci;Maksimalni broj mutacija u sekvenci;Prosjek broja mutacija u sekvenci;Standardna devijacija
+Varijante za osnovni MSA-VAE model;14;39;26,268;3,892
+Varijante za MSA-VAE model niske topljivosti;6;28;9,518;2,99
+Varijante za MSA-VAE model srednje topljivosti;22;39;28,918;2,135
+Varijante za MSA-VAE model visoke topljivosti;54;58;56,462;0,614
+Uzorci za osnovni MSA-VAE model;224;367;329,115;14,151
+Uzorci za MSA-VAE model niske topljivosti;265;358;330,433;15,55
+Uzorci za MSA-VAE model srednje topljivosti;236;359;331,739;10,728
+Uzorci za MSA-VAE model visoke topljivosti;114;360;327,389;15,568
+Varijante za osnovni AR-VAE model;10;32;18,042;3,86
+Varijante za AR-VAE model niske topljivosti;19;143;33,686;14,148
+Varijante za AR-VAE model srednje topljivosti;25;67;38,058;5,053
+Varijante za AR-VAE model visoke topljivosti;52;76;60,674;4,227
+Uzorci za osnovni AR-VAE model;285;631;455,353;64,113
+Uzorci za AR-VAE model niske topljivosti;308;643;511,048;75,137
+Uzorci za AR-VAE model srednje topljivosti;274;612;450,194;47,731
+Uzorci za AR-VAE model visoke topljivosti;255;580;411,154;43,113
+Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;17;25;20,762;1,603
+Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;17;31;24,228;2,115
+Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;24;68;40,986;5,615
+Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;13;39;21,094;3,645
+Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;15;37;24,56;3,779
+Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;23;53;34,868;4,75
+Profil obitelji luciferaza;1967;1980;1976,288;1,769
+Skup podataka za validaciju;272;357;325,629;13,83
+Skup podataka za treniranje;9;358;324,804;16,089
+Skup podataka za treniranje i validaciju;9;360;347,383;8,169

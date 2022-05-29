@@ -1,0 +1,27 @@
+Skup sekvenci;Minimalno podudaranje sekvenci (postotak);Maksimalno podudaranje sekvenci (postotak);Prosjek podudaranja sekvenci (postotak);Standardna devijacija
+Varijante za osnovni MSA-VAE model;89,167;96,111;92,703;1,081
+Varijante za MSA-VAE model niske topljivosti;92,222;98,333;97,356;0,83
+Varijante za MSA-VAE model srednje topljivosti;89,167;93,889;91,967;0,593
+Varijante za MSA-VAE model visoke topljivosti;83,889;85,0;84,316;0,17
+Uzorci za osnovni MSA-VAE model;32,037;58,519;39,053;2,621
+Uzorci za MSA-VAE model niske topljivosti;36,412;52,931;41,309;2,762
+Uzorci za MSA-VAE model srednje topljivosti;39,049;59,932;43,678;1,821
+Uzorci za MSA-VAE model visoke topljivosti;35,599;79,606;41,433;2,785
+Varijante za osnovni AR-VAE model;91,111;97,222;94,988;1,072
+Varijante za AR-VAE model niske topljivosti;69,048;95,887;92,709;3,062
+Varijante za AR-VAE model srednje topljivosti;81,44;93,075;89,458;1,4
+Varijante za AR-VAE model visoke topljivosti;78,889;85,556;83,146;1,174
+Uzorci za osnovni AR-VAE model;72,325;87,5;80,028;2,812
+Uzorci za AR-VAE model niske topljivosti;75,477;88,253;80,509;2,866
+Uzorci za AR-VAE model srednje topljivosti;71,965;87,448;79,377;2,186
+Uzorci za AR-VAE model visoke topljivosti;67,232;85,593;76,771;2,436
+Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;93,056;95,278;94,233;0,445
+Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;91,389;95,278;93,27;0,587
+Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;81,111;93,333;88,615;1,56
+Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;89,683;96,561;94,42;0,964
+Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;89,779;95,856;93,215;1,044
+Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;85,278;93,611;90,314;1,32
+Profil obitelji luciferaza;0,0;0,657;0,187;0,089
+Skup podataka za validaciju;0,833;24,444;9,548;3,842
+Skup podataka za treniranje;0,556;97,5;9,777;4,469
+Skup podataka za treniranje i validaciju;0,0;97,5;3,505;2,269
