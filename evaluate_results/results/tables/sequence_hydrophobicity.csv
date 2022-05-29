@@ -3,25 +3,25 @@ Varijante za osnovni MSA-VAE model;0,36;0,36;0,36;0,0
 Varijante za MSA-VAE model niske topljivosti;0,359;0,36;0,36;0,0
 Varijante za MSA-VAE model srednje topljivosti;0,36;0,361;0,361;0,0
 Varijante za MSA-VAE model visoke topljivosti;0,36;0,36;0,36;0,0
-Uzorci za osnovni MSA-VAE model;0,357;0,364;0,361;0,001
-Uzorci za MSA-VAE model niske topljivosti;0,358;0,365;0,362;0,001
-Uzorci za MSA-VAE model srednje topljivosti;0,357;0,364;0,361;0,001
-Uzorci za MSA-VAE model visoke topljivosti;0,357;0,364;0,361;0,001
+Uzorci za osnovni MSA-VAE model;0,351;0,363;0,359;0,002
+Uzorci za MSA-VAE model niske topljivosti;0,353;0,364;0,359;0,001
+Uzorci za MSA-VAE model srednje topljivosti;0,352;0,364;0,359;0,002
+Uzorci za MSA-VAE model visoke topljivosti;0,35;0,363;0,358;0,002
 Varijante za osnovni AR-VAE model;0,359;0,361;0,36;0,0
-Varijante za AR-VAE model niske topljivosti;0,36;0,362;0,361;0,0
+Varijante za AR-VAE model niske topljivosti;0,359;0,361;0,36;0,0
 Varijante za AR-VAE model srednje topljivosti;0,359;0,361;0,36;0,0
 Varijante za AR-VAE model visoke topljivosti;0,36;0,361;0,36;0,0
-Uzorci za osnovni AR-VAE model;0,356;0,363;0,361;0,001
-Uzorci za AR-VAE model niske topljivosti;0,358;0,364;0,361;0,001
-Uzorci za AR-VAE model srednje topljivosti;0,357;0,363;0,361;0,001
-Uzorci za AR-VAE model visoke topljivosti;0,357;0,363;0,361;0,001
+Uzorci za osnovni AR-VAE model;0,353;0,363;0,359;0,001
+Uzorci za AR-VAE model niske topljivosti;0,357;0,363;0,36;0,001
+Uzorci za AR-VAE model srednje topljivosti;0,355;0,362;0,359;0,001
+Uzorci za AR-VAE model visoke topljivosti;0,353;0,362;0,359;0,001
 Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;0,36;0,36;0,36;0,0
 Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;0,36;0,36;0,36;0,0
 Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;0,359;0,36;0,36;0,0
 Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;0,359;0,361;0,36;0,0
 Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;0,359;0,36;0,359;0,0
-Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;0,359;0,361;0,36;0,0
-Profil obitelji luciferaza;0,356;0,365;0,361;0,001
-Skup podataka za validaciju;0,356;0,364;0,361;0,001
-Skup podataka za treniranje;0,356;0,364;0,361;0,001
-Skup podataka za treniranje i validaciju;0,356;0,364;0,361;0,001
+Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;0,359;0,36;0,36;0,0
+Profil obitelji luciferaza;0,351;0,365;0,359;0,001
+Skup podataka za validaciju;0,353;0,363;0,359;0,001
+Skup podataka za treniranje;0,352;0,364;0,359;0,001
+Skup podataka za treniranje i validaciju;0,352;0,364;0,359;0,001

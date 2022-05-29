@@ -45,14 +45,7 @@ def sequence_composition(filename, title):
     lines = [line.strip().replace('-', '') for line in lines]
     new_charged = [] 
     new_hydro = [] 
-    new_composition = {}
-    max_line = 0 
-    for line in lines:
-        max_line = max(max_line, len(line)) 
-    min_log_P = max_line * min(hydro.values())
-    max_log_P = max_line * max(hydro.values())
-    log_P_range = max_log_P - min_log_P
-    print(min_log_P, max_log_P, log_P_range)
+    new_composition = {} 
     for amino_acid in all_mino_acids:
         new_composition[amino_acid] = 0
     for sequence_index in range(1, len(lines), 2): 
@@ -67,7 +60,10 @@ def sequence_composition(filename, title):
                 net_charge += amino_count
             elif amino_acid in negative:
                 net_charge -= amino_count
-        new_charged.append(IP(lines[sequence_index]).charge_at_pH(7.0))
+        new_charged.append(IP(lines[sequence_index]).charge_at_pH(7.0)) 
+        min_log_P = len(line) * min(hydro.values())
+        max_log_P = len(line) * max(hydro.values())
+        log_P_range = max_log_P - min_log_P
         new_hydro.append((net_hydro - min_log_P) / log_P_range)
     print(title) 
     print("charge", np.min(new_charged), np.max(new_charged), np.mean(new_charged), np.std(new_charged))
@@ -124,13 +120,6 @@ def sequence_composition_multiple(filenames, title):
     new_charged = [] 
     new_hydro = [] 
     new_composition = {}
-    max_line = 0 
-    for line in lines:
-        max_line = max(max_line, len(line)) 
-    min_log_P = max_line * min(hydro.values())
-    max_log_P = max_line * max(hydro.values())
-    log_P_range = max_log_P - min_log_P
-    print(min_log_P, max_log_P, log_P_range)
     for amino_acid in all_mino_acids:
         new_composition[amino_acid] = 0
     for sequence_index in range(1, len(lines), 2): 
@@ -146,6 +135,9 @@ def sequence_composition_multiple(filenames, title):
             elif amino_acid in negative:
                 net_charge -= amino_count
         new_charged.append(IP(lines[sequence_index]).charge_at_pH(7.0))
+        min_log_P = len(line) * min(hydro.values())
+        max_log_P = len(line) * max(hydro.values())
+        log_P_range = max_log_P - min_log_P
         new_hydro.append((net_hydro - min_log_P) / log_P_range)
     print(title) 
     print("charge", np.min(new_charged), np.max(new_charged), np.mean(new_charged), np.std(new_charged))
