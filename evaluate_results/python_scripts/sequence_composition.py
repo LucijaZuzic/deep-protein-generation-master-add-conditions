@@ -7,7 +7,7 @@ Created on Sun May 22 12:57:42 2022
 
 import matplotlib.pyplot as plt 
 import numpy as np
-
+from Bio.SeqUtils.IsoelectricPoint import IsoelectricPoint as IP
 positive = ['R','K','H']
 negative = ['D','E']
 
@@ -60,7 +60,8 @@ def sequence_composition(filename, title):
                 net_charge += amino_count
             elif amino_acid in negative:
                 net_charge -= amino_count
-        new_charged.append(net_charge / len(line)) 
+        #new_charged.append(net_charge / len(line)) 
+        new_charged.append(IP(lines[sequence_index].replace("-", "")).charge_at_pH(7.0))
         new_hydro.append(net_hydro / len(line)) 
     print(title) 
     print("charge", np.min(new_charged), np.max(new_charged), np.mean(new_charged), np.std(new_charged))
@@ -131,7 +132,8 @@ def sequence_composition_multiple(filenames, title):
                 net_charge += amino_count
             elif amino_acid in negative:
                 net_charge -= amino_count
-        new_charged.append(net_charge / len(line)) 
+        #new_charged.append(net_charge / len(line)) 
+        new_charged.append(IP(lines[sequence_index].replace("-", "")).charge_at_pH(7.0))
         new_hydro.append(net_hydro / len(line))
     print(title) 
     print("charge", np.min(new_charged), np.max(new_charged), np.mean(new_charged), np.std(new_charged))
@@ -172,7 +174,7 @@ def sequence_composition_multiple(filenames, title):
     retval[2] += "\n"
     return retval
   
-output_string_charged = "Skup sekvenci;Minimalni prosjek naboja aminokiseline u sekvenci;Maksimalni prosjek naboja aminokiseline u sekvenci;Prosjek prosjeka naboja aminokiseline u sekvenci;Standardna devijacija\n"
+output_string_charged = "Skup sekvenci;Minimalni naboj sekvence;Maksimalni naboj sekvence;Prosjek naboja sekvence;Standardna devijacija\n"
 output_string_hydro = "Skup sekvenci;Minimalni prosjek hidrofobnosti aminokiseline u sekvenci;Maksimalni prosjek hidrofobnosti aminokiseline u sekvenci;Prosjek prosjeka hidrofobnosti aminokiseline u sekvenci;Standardna devijacija\n"
 output_string_composition = ""
 for amino_acid in all_mino_acids:

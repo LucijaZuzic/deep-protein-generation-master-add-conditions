@@ -1,27 +1,27 @@
-Skup sekvenci;Minimalni prosjek naboja aminokiseline u sekvenci;Maksimalni prosjek naboja aminokiseline u sekvenci;Prosjek prosjeka naboja aminokiseline u sekvenci;Standardna devijacija
-Varijante za osnovni MSA-VAE model;-0,025352;0,002809;-0,009455;0,004303
-Varijante za MSA-VAE model niske topljivosti;0,0;0,019499;0,011639;0,003046
-Varijante za MSA-VAE model srednje topljivosti;-0,002801;0,019553;0,008726;0,002579
-Varijante za MSA-VAE model visoke topljivosti;-0,025352;-0,014085;-0,020197;0,001348
-Uzorci za osnovni MSA-VAE model;-0,137931;0,155172;0,004111;0,031938
-Uzorci za MSA-VAE model niske topljivosti;-0,103704;0,142857;0,01181;0,033816
-Uzorci za MSA-VAE model srednje topljivosti;-0,093923;0,125;0,008401;0,031249
-Uzorci za MSA-VAE model visoke topljivosti;-0,108696;0,130769;-0,003941;0,030526
-Varijante za osnovni AR-VAE model;-0,014085;0,027855;0,005716;0,006222
-Varijante za AR-VAE model niske topljivosti;-0,016667;0,043573;0,009451;0,008075
-Varijante za AR-VAE model srednje topljivosti;-0,016901;0,025352;0,005625;0,007498
-Varijante za AR-VAE model visoke topljivosti;-0,03662;0,00565;-0,015367;0,008335
-Uzorci za osnovni AR-VAE model;-0,080247;0,081433;-0,006806;0,021059
-Uzorci za AR-VAE model niske topljivosti;-0,050167;0,088235;0,011145;0,019722
-Uzorci za AR-VAE model srednje topljivosti;-0,103352;0,122034;0,00232;0,023421
-Uzorci za AR-VAE model visoke topljivosti;-0,115274;0,048485;-0,024331;0,023036
-Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;-0,002817;0,014085;0,007368;0,003225
-Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;-0,008451;0,014085;0,005638;0,004181
-Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;-0,030986;0,008451;-0,013753;0,006728
-Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;-0,013889;0,022222;0,006201;0,006331
-Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;-0,022284;0,022284;0,000701;0,00673
-Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;-0,030641;0,016713;-0,008193;0,007458
-Profil obitelji luciferaza;-0,177419;0,177632;0,000449;0,020977
-Skup podataka za validaciju;-0,062893;0,148052;0,00235;0,016888
-Skup podataka za treniranje;-0,073171;0,202055;0,003256;0,01663
-Skup podataka za treniranje i validaciju;-0,073171;0,202055;0,003073;0,016687
+Skup sekvenci;Minimalni naboj sekvence;Maksimalni naboj sekvence;Prosjek naboja sekvence;Standardna devijacija
+Varijante za osnovni MSA-VAE model;-19,464525;-9,57268;-14,073699;1,539984
+Varijante za MSA-VAE model niske topljivosti;-9,655104;-2,663163;-5,486893;1,091067
+Varijante za MSA-VAE model srednje topljivosti;-11,56538;-4,489887;-7,455015;0,908962
+Varijante za MSA-VAE model visoke topljivosti;-19,556078;-15,561018;-17,723974;0,471514
+Uzorci za osnovni MSA-VAE model;-24,152162;13,034543;-3,729971;5,116406
+Uzorci za MSA-VAE model niske topljivosti;-24,786305;14,035975;-2,826013;5,025305
+Uzorci za MSA-VAE model srednje topljivosti;-28,51272;15,883833;-3,34639;5,590663
+Uzorci za MSA-VAE model visoke topljivosti;-26,811367;12,125082;-4,775753;5,459226
+Varijante za osnovni AR-VAE model;-14,557182;-0,582223;-8,233655;2,117129
+Varijante za AR-VAE model niske topljivosti;-14,722605;3,037747;-6,637947;2,701081
+Varijante za AR-VAE model srednje topljivosti;-17,279585;-2,589651;-9,539806;2,39219
+Varijante za AR-VAE model visoke topljivosti;-24,455085;-8,566809;-15,98041;2,809509
+Uzorci za osnovni AR-VAE model;-33,358009;19,055098;-9,212718;7,038864
+Uzorci za AR-VAE model niske topljivosti;-31,094311;20,253528;-6,224135;6,908694
+Uzorci za AR-VAE model srednje topljivosti;-41,923282;24,168321;-6,95755;8,070693
+Uzorci za AR-VAE model visoke topljivosti;-49,453453;10,068984;-14,407648;8,020069
+Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;-11,477626;-6,488056;-8,378863;0,988378
+Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;-12,662566;-5,57355;-8,250786;1,289093
+Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;-19,743984;-7,568918;-13,865662;2,221656
+Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;-19,207615;-4,488198;-10,634514;2,208274
+Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;-19,469605;-5,312587;-12,140984;2,291466
+Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;-23,375912;-6,400767;-15,21401;2,528142
+Profil obitelji luciferaza;-54,190076;26,998207;-7,837839;5,863801
+Skup podataka za validaciju;-29,439023;42,132751;-8,633637;5,414985
+Skup podataka za treniranje;-32,740503;55,056765;-8,446359;5,094023
+Skup podataka za treniranje i validaciju;-32,740503;55,056765;-8,484078;5,160818
