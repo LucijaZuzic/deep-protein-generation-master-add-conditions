@@ -1,27 +1,27 @@
-Skup sekvenci;Minimalni prosjek hidrofobnosti aminokiseline u sekvenci;Maksimalni prosjek hidrofobnosti aminokiseline u sekvenci;Prosjek prosjeka hidrofobnosti aminokiseline u sekvenci;Standardna devijacija
-Varijante za osnovni MSA-VAE model;-0,029803;-0,02577;-0,027417;0,001156
-Varijante za MSA-VAE model niske topljivosti;-0,030667;-0,025556;-0,027233;0,000862
-Varijante za MSA-VAE model srednje topljivosti;-0,028268;-0,020559;-0,023528;0,001139
-Varijante za MSA-VAE model visoke topljivosti;-0,025915;-0,02462;-0,024749;0,000389
-Uzorci za osnovni MSA-VAE model;-0,076667;-0,007931;-0,033656;0,009178
-Uzorci za MSA-VAE model niske topljivosti;-0,067191;-0,007077;-0,031262;0,008383
-Uzorci za MSA-VAE model srednje topljivosti;-0,075765;-0,004035;-0,032833;0,008951
-Uzorci za MSA-VAE model visoke topljivosti;-0,086929;-0,010698;-0,037075;0,009486
-Varijante za osnovni AR-VAE model;-0,031099;-0,023;-0,027155;0,001279
-Varijante za AR-VAE model niske topljivosti;-0,031944;-0,023;-0,026522;0,001403
-Varijante za AR-VAE model srednje topljivosti;-0,031364;-0,023064;-0,027378;0,001497
-Varijante za AR-VAE model visoke topljivosti;-0,029803;-0,020732;-0,025234;0,001501
-Uzorci za osnovni AR-VAE model;-0,065051;-0,010222;-0,030185;0,006531
-Uzorci za AR-VAE model niske topljivosti;-0,045266;-0,009471;-0,026425;0,005068
-Uzorci za AR-VAE model srednje topljivosti;-0,05689;-0,013986;-0,032789;0,005925
-Uzorci za AR-VAE model visoke topljivosti;-0,064615;-0,014254;-0,035401;0,006921
-Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;-0,029887;-0,02577;-0,027806;0,000678
-Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;-0,029803;-0,02577;-0,027738;0,000812
-Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;-0,032394;-0,02462;-0,026839;0,001127
-Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;-0,033039;-0,024278;-0,028623;0,001234
-Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;-0,034596;-0,026833;-0,030422;0,001327
-Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;-0,033315;-0,024482;-0,029155;0,00149
-Profil obitelji luciferaza;-0,077474;-0,0;-0,032199;0,007712
-Skup podataka za validaciju;-0,068097;-0,008338;-0,032307;0,006711
-Skup podataka za treniranje;-0,072538;-0,002977;-0,031555;0,006926
-Skup podataka za treniranje i validaciju;-0,072538;-0,002977;-0,031706;0,00689
+Skup sekvenci;Minimalni log P sekvence;Maksimalni log P sekvence;Prosjek log P-a sekvence;Standardna devijacija
+Varijante za osnovni MSA-VAE model;0,36;0,36;0,36;0,0
+Varijante za MSA-VAE model niske topljivosti;0,359;0,36;0,36;0,0
+Varijante za MSA-VAE model srednje topljivosti;0,36;0,361;0,361;0,0
+Varijante za MSA-VAE model visoke topljivosti;0,36;0,36;0,36;0,0
+Uzorci za osnovni MSA-VAE model;0,357;0,364;0,361;0,001
+Uzorci za MSA-VAE model niske topljivosti;0,358;0,365;0,362;0,001
+Uzorci za MSA-VAE model srednje topljivosti;0,357;0,364;0,361;0,001
+Uzorci za MSA-VAE model visoke topljivosti;0,357;0,364;0,361;0,001
+Varijante za osnovni AR-VAE model;0,359;0,361;0,36;0,0
+Varijante za AR-VAE model niske topljivosti;0,36;0,362;0,361;0,0
+Varijante za AR-VAE model srednje topljivosti;0,359;0,361;0,36;0,0
+Varijante za AR-VAE model visoke topljivosti;0,36;0,361;0,36;0,0
+Uzorci za osnovni AR-VAE model;0,356;0,363;0,361;0,001
+Uzorci za AR-VAE model niske topljivosti;0,358;0,364;0,361;0,001
+Uzorci za AR-VAE model srednje topljivosti;0,357;0,363;0,361;0,001
+Uzorci za AR-VAE model visoke topljivosti;0,357;0,363;0,361;0,001
+Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;0,36;0,36;0,36;0,0
+Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;0,36;0,36;0,36;0,0
+Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;0,359;0,36;0,36;0,0
+Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;0,359;0,361;0,36;0,0
+Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;0,359;0,36;0,359;0,0
+Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;0,359;0,361;0,36;0,0
+Profil obitelji luciferaza;0,356;0,365;0,361;0,001
+Skup podataka za validaciju;0,356;0,364;0,361;0,001
+Skup podataka za treniranje;0,356;0,364;0,361;0,001
+Skup podataka za treniranje i validaciju;0,356;0,364;0,361;0,001

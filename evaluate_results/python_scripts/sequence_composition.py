@@ -46,6 +46,13 @@ def sequence_composition(filename, title):
     new_charged = [] 
     new_hydro = [] 
     new_composition = {}
+    max_line = 0 
+    for line in lines:
+        max_line = max(max_line, len(line)) 
+    min_log_P = max_line * min(hydro.values())
+    max_log_P = max_line * max(hydro.values())
+    log_P_range = max_log_P - min_log_P
+    print(min_log_P, max_log_P, log_P_range)
     for amino_acid in all_mino_acids:
         new_composition[amino_acid] = 0
     for sequence_index in range(1, len(lines), 2): 
@@ -60,20 +67,19 @@ def sequence_composition(filename, title):
                 net_charge += amino_count
             elif amino_acid in negative:
                 net_charge -= amino_count
-        #new_charged.append(net_charge / len(line)) 
-        new_charged.append(IP(lines[sequence_index].replace("-", "")).charge_at_pH(7.0))
-        new_hydro.append(net_hydro / len(line)) 
+        new_charged.append(IP(lines[sequence_index]).charge_at_pH(7.0))
+        new_hydro.append((net_hydro - min_log_P) / log_P_range)
     print(title) 
     print("charge", np.min(new_charged), np.max(new_charged), np.mean(new_charged), np.std(new_charged))
     plt.hist(new_charged)
-    plt.xlabel("Prosječan naboj aminokiseline u sekvenci")
+    plt.xlabel("Naboj sekvence")
     plt.ylabel("Broj sekvenci")
     plt.title(title)
     plt.savefig("..\\results\\sequence_charge\\" + filename.replace('.txt', '_sequence_charge.png').replace('.fa', '_sequence_charge.png').replace('right_padded\\', '').replace('training_validation\\', '').replace('lines_merged\\lines_merged_', ''), bbox_inches='tight')
     plt.close()
     print("hydro", np.min(new_hydro), np.max(new_hydro), np.mean(new_hydro), np.std(new_hydro))
     plt.hist(new_hydro)
-    plt.xlabel("Prosječna hidrofobnost aminokiseline u sekvenci")
+    plt.xlabel("log P sekvence")
     plt.ylabel("Broj sekvenci")
     plt.title(title)
     plt.savefig("..\\results\\sequence_hydrophobicity\\" + filename.replace('.txt', '_sequence_hydrophobicity.png').replace('.fa', '_sequence_hydrophobicity.png').replace('right_padded\\', '').replace('training_validation\\', '').replace('lines_merged\\lines_merged_', ''), bbox_inches='tight')
@@ -94,8 +100,8 @@ def sequence_composition(filename, title):
     plt.close()
     file.close()
     retval = ["","",""]
-    retval[0] = title + ";" + str(np.round(np.min(new_charged),6)) + ";" + str(np.round(np.max(new_charged),6)) + ";" + str(np.round(np.mean(new_charged),6)) + ";" + str(np.round(np.std(new_charged),6))  + "\n"       
-    retval[1] = title + ";" + str(np.round(np.min(new_hydro),6)) + ";" + str(np.round(np.max(new_hydro),6)) + ";" + str(np.round(np.mean(new_hydro),6)) + ";" + str(np.round(np.std(new_hydro),6))  + "\n"           
+    retval[0] = title + ";" + str(np.round(np.min(new_charged),3)) + ";" + str(np.round(np.max(new_charged),3)) + ";" + str(np.round(np.mean(new_charged),3)) + ";" + str(np.round(np.std(new_charged),3))  + "\n"       
+    retval[1] = title + ";" + str(np.round(np.min(new_hydro),3)) + ";" + str(np.round(np.max(new_hydro),3)) + ";" + str(np.round(np.mean(new_hydro),3)) + ";" + str(np.round(np.std(new_hydro),3))  + "\n"           
     retval[2] = title
     for amino_acid in all_mino_acids:
         retval[2] += ";" + str(np.round(new_composition[amino_acid] * 100,3))
@@ -118,6 +124,13 @@ def sequence_composition_multiple(filenames, title):
     new_charged = [] 
     new_hydro = [] 
     new_composition = {}
+    max_line = 0 
+    for line in lines:
+        max_line = max(max_line, len(line)) 
+    min_log_P = max_line * min(hydro.values())
+    max_log_P = max_line * max(hydro.values())
+    log_P_range = max_log_P - min_log_P
+    print(min_log_P, max_log_P, log_P_range)
     for amino_acid in all_mino_acids:
         new_composition[amino_acid] = 0
     for sequence_index in range(1, len(lines), 2): 
@@ -132,20 +145,19 @@ def sequence_composition_multiple(filenames, title):
                 net_charge += amino_count
             elif amino_acid in negative:
                 net_charge -= amino_count
-        #new_charged.append(net_charge / len(line)) 
-        new_charged.append(IP(lines[sequence_index].replace("-", "")).charge_at_pH(7.0))
-        new_hydro.append(net_hydro / len(line))
+        new_charged.append(IP(lines[sequence_index]).charge_at_pH(7.0))
+        new_hydro.append((net_hydro - min_log_P) / log_P_range)
     print(title) 
     print("charge", np.min(new_charged), np.max(new_charged), np.mean(new_charged), np.std(new_charged))
     plt.hist(new_charged)
-    plt.xlabel("Prosječan naboj aminokiseline u sekvenci")
+    plt.xlabel("Naboj sekvence")
     plt.ylabel("Broj sekvenci")
     plt.title(title)
     plt.savefig("..\\results\\sequence_charge\\" + all_names + "sequence_charge.png", bbox_inches='tight')
     plt.close()
     print("hydro", np.min(new_hydro), np.max(new_hydro), np.mean(new_hydro), np.std(new_hydro))
     plt.hist(new_hydro)
-    plt.xlabel("Prosječna hidrofobnost aminokiseline u sekvenci")
+    plt.xlabel("log P sekvence")
     plt.ylabel("Broj sekvenci")
     plt.title(title)
     plt.savefig("..\\results\\sequence_hydrophobicity\\" + all_names + "sequence_hydrophobicity.png", bbox_inches='tight')
@@ -166,8 +178,8 @@ def sequence_composition_multiple(filenames, title):
     plt.close()
     file.close()
     retval = ["","",""]
-    retval[0] = title + ";" + str(np.round(np.min(new_charged),6)) + ";" + str(np.round(np.max(new_charged),6)) + ";" + str(np.round(np.mean(new_charged),6)) + ";" + str(np.round(np.std(new_charged),6))  + "\n"       
-    retval[1] = title + ";" + str(np.round(np.min(new_hydro),6)) + ";" + str(np.round(np.max(new_hydro),6)) + ";" + str(np.round(np.mean(new_hydro),6)) + ";" + str(np.round(np.std(new_hydro),6))  + "\n"       
+    retval[0] = title + ";" + str(np.round(np.min(new_charged),3)) + ";" + str(np.round(np.max(new_charged),3)) + ";" + str(np.round(np.mean(new_charged),3)) + ";" + str(np.round(np.std(new_charged),3))  + "\n"       
+    retval[1] = title + ";" + str(np.round(np.min(new_hydro),3)) + ";" + str(np.round(np.max(new_hydro),3)) + ";" + str(np.round(np.mean(new_hydro),3)) + ";" + str(np.round(np.std(new_hydro),3))  + "\n"       
     retval[2] = title
     for amino_acid in all_mino_acids:
         retval[2] += ";" + str(np.round(new_composition[amino_acid] * 100,3))
@@ -175,7 +187,7 @@ def sequence_composition_multiple(filenames, title):
     return retval
   
 output_string_charged = "Skup sekvenci;Minimalni naboj sekvence;Maksimalni naboj sekvence;Prosjek naboja sekvence;Standardna devijacija\n"
-output_string_hydro = "Skup sekvenci;Minimalni prosjek hidrofobnosti aminokiseline u sekvenci;Maksimalni prosjek hidrofobnosti aminokiseline u sekvenci;Prosjek prosjeka hidrofobnosti aminokiseline u sekvenci;Standardna devijacija\n"
+output_string_hydro = "Skup sekvenci;Minimalni log P sekvence;Maksimalni log P sekvence;Prosjek log P-a sekvence;Standardna devijacija\n"
 output_string_composition = ""
 for amino_acid in all_mino_acids:
     output_string_composition += ";" + amino_acid
