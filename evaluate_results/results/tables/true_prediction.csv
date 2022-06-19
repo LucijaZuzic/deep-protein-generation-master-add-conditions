@@ -1,27 +1,27 @@
-Skup sekvenci;Udio uzoraka niske topljivosti (postotak);Udio uzoraka srednje topljivosti (postotak);Udio uzoraka visoke topljivosti (postotak)
-Varijante za osnovni MSA-VAE model;0,0;4,2;95,8
-Varijante za MSA-VAE model niske topljivosti;84,8;15,2;0,0
-Varijante za MSA-VAE model srednje topljivosti;26,2;73,8;0,0
-Varijante za MSA-VAE model visoke topljivosti;0,0;0,0;100,0
-Uzorci za osnovni MSA-VAE model;5,7;25,067;69,233
-Uzorci za MSA-VAE model niske topljivosti;17,033;34,533;48,433
-Uzorci za MSA-VAE model srednje topljivosti;4,135;25,842;70,023
-Uzorci za MSA-VAE model visoke topljivosti;0,667;10,9;88,433
-Varijante za osnovni AR-VAE model;10,0;77,8;12,2
-Varijante za AR-VAE model niske topljivosti;82,0;17,4;0,6
-Varijante za AR-VAE model srednje topljivosti;7,8;65,2;27,0
-Varijante za AR-VAE model visoke topljivosti;0,0;3,4;96,6
-Uzorci za osnovni AR-VAE model;10,6;36,2;53,2
-Uzorci za AR-VAE model niske topljivosti;52,767;35,033;12,2
-Uzorci za AR-VAE model srednje topljivosti;5,167;44,1;50,733
-Uzorci za AR-VAE model visoke topljivosti;0,167;7,133;92,7
-Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti;2,8;96,8;0,4
-Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti;7,4;87,0;5,6
-Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti;0,0;6,4;93,6
-Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti;2,6;55,4;42,0
-Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti;0,0;18,0;82,0
-Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti;0,0;1,0;99,0
-Profil obitelji luciferaza;15,22;33,823;50,957
-Skup podataka za validaciju;28,212;35,811;35,976
-Skup podataka za treniranje;34,228;32,914;32,858
-Skup podataka za treniranje i validaciju;33,016;33,498;33,486
+Sequence set;Percentage of low solubility samples;Percentage of mid solubility samples;Percentage of high solubility samples
+Variants for basic MSA-VAE model;0,0;4,2;95,8
+Variants for MSA-VAE model trained on low solubility;84,8;15,2;0,0
+Variants for MSA-VAE model trained on mid solubility;26,2;73,8;0,0
+Variants for MSA-VAE model trained on high solubility;0,0;0,0;100,0
+Samples for MSA-VAE model;5,7;25,067;69,233
+Samples for MSA-VAE model trained on low solubility;17,033;34,533;48,433
+Samples for MSA-VAE model trained on mid solubility;4,135;25,842;70,023
+Samples for MSA-VAE model trained on high solubility;0,667;10,9;88,433
+Variants for for AR-VAE model;10,0;77,8;12,2
+Variants for AR-VAE model trained on low solubility;82,0;17,4;0,6
+Variants for AR-VAE model trained on mid solubility;7,8;65,2;27,0
+Variants for AR-VAE model trained on high solubility;0,0;3,4;96,6
+Samples for AR-VAE model;10,6;36,2;53,2
+Samples for AR-VAE model trained on low solubility;52,767;35,033;12,2
+Samples for AR-VAE model trained on mid solubility;5,167;44,1;50,733
+Samples for AR-VAE model trained on high solubility;0,167;7,133;92,7
+Variants for conditional MSA-VAE model with low solubility;2,8;96,8;0,4
+Variants for conditional MSA-VAE model with mid solubility;7,4;87,0;5,6
+Variants for conditional MSA-VAE model with high solubility;0,0;6,4;93,6
+Variants for conditional AR-VAE model with low solubility;2,6;55,4;42,0
+Variants for conditional AR-VAE model with mid solubility;0,0;18,0;82,0
+Variants for conditional AR-VAE model with high solubility;0,0;1,0;99,0
+Profile of luciferase family;15,22;33,823;50,957
+Validation data;28,212;35,811;35,976
+Training data;34,228;32,914;32,858
+Training and validation data;33,016;33,498;33,486

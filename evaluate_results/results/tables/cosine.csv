@@ -1,0 +1,35 @@
+Sequence set;Minimal cosine similarity;Maximal cosine similarityt;Average cosine similarity;Standard deviation
+Variants for basic MSA-VAE model;98,816;99,972;99,645;0,219
+Variants for MSA-VAE model trained on low solubility;7,024;56,703;49,877;2,979
+Variants for MSA-VAE model trained on mid solubility;27,3;37,733;30,631;1,449
+Variants for MSA-VAE model trained on high solubility;57,504;58,164;57,94;0,099
+Samples for basic MSA-VAE model;-92,655;91,309;0,386;34,833
+Samples for MSA-VAE model trained on low solubility;-82,432;85,074;4,341;31,134
+Samples for MSA-VAE model trained on mid solubility;-82,668;84,736;0,845;31,62
+Samples for MSA-VAE model trained on high solubility;-87,103;90,012;-7,89;29,922
+Variants for basic AR-VAE model;98,677;99,878;99,484;0,214
+Variants for AR-VAE model trained on low solubility;-7,36;3,766;-0,72;1,646
+Variants for AR-VAE model trained on mid solubility;-14,326;-6,724;-10,213;1,156
+Variants for AR-VAE model trained on high solubility;-19,231;-10,793;-14,823;1,483
+Samples for basic AR-VAE model;-41,277;56,622;-3,278;13,072
+ Samples for AR-VAE model trained on low solubility;-39,067;56,892;3,816;14,131
+Samples for AR-VAE model trained on mid solubility;-37,34;50,821;3,822;12,257
+Samples for AR-VAE model trained on high solubility;-42,321;44,081;-0,583;12,159
+Variants for conditional MSA-VAE model with low solubility;37,883;99,995;99,589;4,569
+Variants for conditional MSA-VAE model with mid solubility;75,405;99,937;85,031;2,846
+Variants for conditional MSA-VAE model with high solubility;98,169;98,476;98,327;0,036
+Variants for conditional AR-VAE model with low solubility;92,202;99,708;98,843;0,674
+Variants for conditional AR-VAE model with mid solubility;97,025;99,496;98,672;0,371
+Variants for conditional AR-VAE model with high solubility;94,935;97,627;96,541;0,363
+Validation data (AR);-43,461;100,0;-1,153;12,866
+Validation data (MSA);-92,065;100,0;-1,363;33,297
+Validation data (AR conditional);-46,754;100,0;-1,606;13,23
+Validation data (MSA conditional);-85,585;100,0;0,54;30,442
+Training data (AR);-44,358;99,818;-1,223;13,018
+Training data (MSA);-92,653;99,995;-1,944;33,421
+Training data (AR conditional);-46,754;99,788;-1,347;13,35
+Training data (MSA conditional);-86,549;99,983;-0,285;30,624
+Training and validation data (AR);-44,358;99,818;-1,079;13,001
+Training and validation data (MSA);-92,653;99,995;-0,441;33,409
+Training and validation data (AR conditional);-46,754;99,788;-0,875;13,576
+Training and validation data (MSA conditional);-86,549;99,983;-1,677;30,428

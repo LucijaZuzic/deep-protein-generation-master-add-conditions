@@ -37,16 +37,16 @@ def sequence_identity(filename,title):
         difference.append(difference_count)
         score.append(identity)
     plt.hist(score)
-    plt.xlabel("Postotak podudaranja sekvenci")
-    plt.ylabel("Broj sekvenci")  
+    plt.xlabel("Percentage of sequence match")
+    plt.ylabel("Number of sequences")  
     plt.title(title)
     new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged\\lines_merged_', '').replace('training_validation\\', '')
     plt.savefig("..\\results\\sequence_identity\\" + new_filename + "_sequence_identity.png", bbox_inches='tight')
     print(np.min(score), np.max(score), np.mean(score), np.std(score)) 
     plt.close()
     plt.hist(difference)
-    plt.xlabel("Broj mutacija u sekvenci")
-    plt.ylabel("Broj sekvenci")  
+    plt.xlabel("Number of mutations")
+    plt.ylabel("Number of sequences")  
     plt.title(title)
     new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged\\lines_merged_', '').replace('training_validation\\', '')
     plt.savefig("..\\results\\difference_count\\" + new_filename + "_difference_count.png", bbox_inches='tight')
@@ -92,15 +92,15 @@ def sequence_identity_multiple(filenames,title):
         difference.append(difference_count)
         score.append(identity)
     plt.hist(score)
-    plt.xlabel("Postotak podudaranja sekvenci")
-    plt.ylabel("Broj sekvenci")  
+    plt.xlabel("Percentage of sequence match")
+    plt.ylabel("Number of sequences")  
     plt.title(title)
     plt.savefig("..\\results\\sequence_identity\\" + all_names + "sequence_identity.png", bbox_inches='tight')
     print(np.min(score), np.max(score), np.mean(score), np.std(score)) 
     plt.close()
     plt.hist(difference)
-    plt.xlabel("Broj mutacija u sekvenci")
-    plt.ylabel("Broj sekvenci")  
+    plt.xlabel("Number of mutations")
+    plt.ylabel("Number of sequences")  
     plt.title(title)
     plt.savefig("..\\results\\difference_count\\" + all_names + "difference_count.png", bbox_inches='tight')
     plt.close()
@@ -110,91 +110,91 @@ def sequence_identity_multiple(filenames,title):
     retval[1] = title + ";" + str(np.round(np.min(difference),3)) + ";" + str(np.round(np.max(difference),3)) + ";" + str(np.round(np.mean(difference),3)) + ";" + str(np.round(np.std(difference),3))  + "\n" 
     return retval 
   
-output_string_score = "Skup sekvenci;Minimalno podudaranje sekvenci (postotak);Maksimalno podudaranje sekvenci (postotak);Prosjek podudaranja sekvenci (postotak);Standardna devijacija\n"
-output_string_difference = "Skup sekvenci;Minimalni broj mutacija u sekvenci;Maksimalni broj mutacija u sekvenci;Prosjek broja mutacija u sekvenci;Standardna devijacija\n"
+output_string_score = "Sequence set;Maximal sequence match (percentage);Maximal sequence match (percentage);Average sequence match (percentage);Standard deviation\n"
+output_string_difference = "Sequence set;Minimal number of mutations;Maximal number of mutations;Average number of mutations;Standard deviation\n"
  
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_variants_ORIGINAL.txt','Varijante za osnovni MSA-VAE model')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_variants_ORIGINAL.txt','Variants for basic MSA-VAE model')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol0_variants_ORIGINAL.txt','Varijante za MSA-VAE model niske topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol0_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on low solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol1_variants_ORIGINAL.txt','Varijante za MSA-VAE model srednje topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol1_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on mid solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol2_variants_ORIGINAL.txt','Varijante za MSA-VAE model visoke topljivosti')
-output_string_score += s1
-output_string_difference += s2
-
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_samples_ORIGINAL.txt','Uzorci za osnovni MSA-VAE model')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol0_samples_ORIGINAL.txt','Uzorci za MSA-VAE model niske topljivosti')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol1_samples_ORIGINAL.txt','Uzorci za MSA-VAE model srednje topljivosti')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol2_samples_ORIGINAL.txt','Uzorci za MSA-VAE model visoke topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol2_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on high solubility')
 output_string_score += s1
 output_string_difference += s2
 
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_variants_ORIGINAL.txt','Varijante za osnovni AR-VAE model')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_samples_ORIGINAL.txt','Samples for basic MSA-VAE model')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol0_variants_ORIGINAL.txt','Varijante za AR-VAE model niske topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol0_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on low solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol1_variants_ORIGINAL.txt','Varijante za AR-VAE model srednje topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol1_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on mid solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol2_variants_ORIGINAL.txt','Varijante za AR-VAE model visoke topljivosti')
-output_string_score += s1
-output_string_difference += s2
-
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_samples_ORIGINAL.txt','Uzorci za osnovni AR-VAE model')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol0_samples_ORIGINAL.txt','Uzorci za AR-VAE model niske topljivosti')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol1_samples_ORIGINAL.txt','Uzorci za AR-VAE model srednje topljivosti')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol2_samples_ORIGINAL.txt','Uzorci za AR-VAE model visoke topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_sol2_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on high solubility')
 output_string_score += s1
 output_string_difference += s2
 
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_with_conditions_sol0_variants_ORIGINAL.txt','Varijante za uvjetni MSA-VAE model s uvjetom niske topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_variants_ORIGINAL.txt','Variants for basic AR-VAE model')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_with_conditions_sol1_variants_ORIGINAL.txt','Varijante za uvjetni MSA-VAE model s uvjetom srednje topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol0_variants_ORIGINAL.txt','Variants for AR-VAE model trained on low solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_with_conditions_sol2_variants_ORIGINAL.txt','Varijante za uvjetni MSA-VAE model s uvjetom visoke topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol1_variants_ORIGINAL.txt','Variants for AR-VAE model trained on mid solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol2_variants_ORIGINAL.txt','Variants for AR-VAE model trained on high solubility')
 output_string_score += s1
 output_string_difference += s2
 
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_with_conditions_sol0_variants_ORIGINAL.txt','Varijante za uvjetni AR-VAE model s uvjetom niske topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_samples_ORIGINAL.txt','Samples for basic AR-VAE model')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_with_conditions_sol1_variants_ORIGINAL.txt','Varijante za uvjetni AR-VAE model s uvjetom srednje topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol0_samples_ORIGINAL.txt','Samples for AR-VAE model trained on low solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_with_conditions_sol2_variants_ORIGINAL.txt','Varijante za uvjetni AR-VAE model s uvjetom visoke topljivosti')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol1_samples_ORIGINAL.txt','Samples for AR-VAE model trained on mid solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_sol2_samples_ORIGINAL.txt','Samples for AR-VAE model trained on high solubility')
+output_string_score += s1
+output_string_difference += s2
+
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_with_conditions_sol0_variants_ORIGINAL.txt','Variants for conditional MSA-VAE model with low solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_with_conditions_sol1_variants_ORIGINAL.txt','Variants for conditional MSA-VAE model with mid solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = sequence_identity('lines_merged\\lines_merged_msavae_with_conditions_sol2_variants_ORIGINAL.txt','Variants for conditional MSA-VAE model with high solubility')
+output_string_score += s1
+output_string_difference += s2
+
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_with_conditions_sol0_variants_ORIGINAL.txt','Variants for conditional AR-VAE model with low solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_with_conditions_sol1_variants_ORIGINAL.txt','Variants for conditional AR-VAE model with mid solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = sequence_identity('lines_merged\\lines_merged_arvae_with_conditions_sol2_variants_ORIGINAL.txt','Variants for conditional AR-VAE model with high solubility')
 output_string_score += s1
 output_string_difference += s2
    
-s1, s2 = sequence_identity('lines_merged\\lines_merged_PF00296_full.txt', 'Profil obitelji luciferaza')
+s1, s2 = sequence_identity('lines_merged\\lines_merged_PF00296_full.txt', 'Profile of luciferase family')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('training_validation\\luxafilt_llmsa_val.fa', 'Skup podataka za validaciju')
+s1, s2 = sequence_identity('training_validation\\luxafilt_llmsa_val.fa', 'Validation data')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity('training_validation\\luxafilt_llmsa_train.fa', 'Skup podataka za treniranje')  
+s1, s2 = sequence_identity('training_validation\\luxafilt_llmsa_train.fa', 'Training data')  
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = sequence_identity_multiple(['training_validation\\luxafilt_llmsa_train.fa', 'training_validation\\luxafilt_llmsa_val.fa'], 'Skup podataka za treniranje i validaciju')
+s1, s2 = sequence_identity_multiple(['training_validation\\luxafilt_llmsa_train.fa', 'training_validation\\luxafilt_llmsa_val.fa'], 'Training and validation data')
 output_string_score += s1
 output_string_difference += s2
 
