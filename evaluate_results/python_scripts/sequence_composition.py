@@ -89,7 +89,7 @@ def sequence_composition(filename, title):
     print("composition", new_composition)
     plt.bar(x_axis, new_composition.values())
     plt.xticks(x_axis, all_mino_acids)
-    plt.xlabel("Aminacid")
+    plt.xlabel("Amino acid")
     plt.ylabel("Percentage of occurences in sequence set")
     plt.title(title)
     plt.savefig("..\\results\\sequence_composition\\" + filename.replace('.txt', '_sequence_composition.png').replace('.fa', '_sequence_composition.png').replace('right_padded\\', '').replace('training_validation\\', '').replace('lines_merged\\lines_merged_', ''), bbox_inches='tight')
