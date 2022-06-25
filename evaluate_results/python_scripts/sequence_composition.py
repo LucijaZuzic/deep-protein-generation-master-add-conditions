@@ -163,7 +163,7 @@ def sequence_composition_multiple(filenames, title):
     print("composition", new_composition)
     plt.bar(x_axis, new_composition.values())
     plt.xticks(x_axis, all_mino_acids)
-    plt.xlabel("Aminoacid")
+    plt.xlabel("Amino acid")
     plt.ylabel("Percentage of occurences in sequence set")
     plt.title(title)
     plt.savefig("..\\results\\sequence_composition\\" + all_names + "sequence_composition.png", bbox_inches='tight')
