@@ -8,7 +8,7 @@ import numpy as np
  
 def true_prediction(filename, title, limit1, limit2, bin_number):
     try:
-        file = open("..\\sequences\\seq_prediction\\" + filename, 'r')
+        file = open("../sequences/seq_prediction/" + filename, 'r')
     except:
         return
     lines = file.readlines()
@@ -32,7 +32,7 @@ def true_prediction(filename, title, limit1, limit2, bin_number):
     
 def class_division(filename, title, limit1, limit2):
     try:
-        file = open("..\\sequences\\seq_prediction\\" + filename, 'r')
+        file = open("../sequences/seq_prediction/" + filename, 'r')
     except:
         return
     lines = file.readlines()
@@ -57,7 +57,7 @@ def class_division_multiple(filenames, title, limit1, limit2):
     lines = []
     for filename in filenames:
         try:
-            file = open("..\\sequences\\seq_prediction\\" + filename, 'r')
+            file = open("../sequences/seq_prediction/" + filename, 'r')
         except:
             return
         lines += file.readlines() 
@@ -115,6 +115,6 @@ output_string += class_division('seq_prediction_ll_train.txt', 'Training data', 
 output_string += class_division_multiple(['seq_prediction_ll_train.txt', 'seq_prediction_ll_val.txt'], 'Training and validation data', 0.34, 0.447)
 
 output_string = output_string.replace(".", ",")
-file_csv = open("..\\results\\tables\\true_prediction.csv", "w")
+file_csv = open("../results/tables/true_prediction.csv", "w")
 file_csv.write(output_string)
 file_csv.close()

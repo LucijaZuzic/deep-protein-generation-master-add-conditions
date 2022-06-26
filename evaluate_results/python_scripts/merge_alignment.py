@@ -7,7 +7,7 @@ This is a temporary script file.
 
 def merge_alignment(filename):
     try:
-        file = open("..\\sequences\\aligned_sequences\\" + filename, 'r')
+        file = open("../sequences/aligned_sequences/" + filename, 'r')
     except:
         return
     print(filename)
@@ -26,7 +26,7 @@ def merge_alignment(filename):
     if new_seq != "":
         new_file_contents += new_seq + "\n"
     new_seq = ""
-    new_file = open("..\\sequences\\lines_merged\\lines_merged_" + filename, 'w')
+    new_file = open("../sequences/lines_merged/lines_merged_" + filename, 'w')
     new_file.write(new_file_contents)
     new_file.close()
 

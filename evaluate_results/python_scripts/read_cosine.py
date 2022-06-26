@@ -34,7 +34,7 @@ read_matrix()
 
 def similarity(filename, cosine_file, cosine_reference, title, extension = ''): 
     try:
-        file = open("..\\sequences\\" + filename, 'r')
+        file = open("../sequences/" + filename, 'r')
     except:
         print(filename + "not found")
         return
@@ -73,8 +73,8 @@ def similarity(filename, cosine_file, cosine_reference, title, extension = ''):
     plt.ylabel("BLOSSUM 62 score")
     plt.xlabel("Cosine similarity")  
     plt.title(title)
-    new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged\\lines_merged_', '').replace('training_validation\\', '')
-    plt.savefig("..\\results\\cosine\\" + new_filename + "_cosine" + extension + ".png", bbox_inches='tight')
+    new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged/lines_merged_', '').replace('training_validation/', '')
+    plt.savefig("../results/cosine/" + new_filename + "_cosine" + extension + ".png", bbox_inches='tight')
     print(np.min(cosine), np.max(cosine), np.mean(cosine), np.std(cosine)) 
     plt.close() 
     retval = title + ";" + str(np.round(np.min(cosine) * 100,3)) + ";" + str(np.round(np.max(cosine) * 100,3)) + ";" + str(np.round(np.mean(cosine) * 100,3)) + ";" + str(np.round(np.std(cosine) * 100,3))  + "\n" 
@@ -86,12 +86,12 @@ def similarity_multiple(filenames, cosine_file, cosine_reference, title, extensi
     all_names = ""
     for filename in filenames:
         try:
-            file = open("..\\sequences\\" + filename, 'r')
+            file = open("../sequences/" + filename, 'r')
         except:
             print(filename + "not found")
             return
         lines_part = file.readlines()
-        all_names += filename.replace('_ORIGINAL.txt', '_').replace('_ORIGINAL.txt', '_').replace('.txt', '_').replace('.fa', '_').replace('lines_merged\\lines_merged_', '').replace('training_validation\\', '')
+        all_names += filename.replace('_ORIGINAL.txt', '_').replace('_ORIGINAL.txt', '_').replace('.txt', '_').replace('.fa', '_').replace('lines_merged/lines_merged_', '').replace('training_validation/', '')
         lines_part = [line.strip().replace('-', '') for line in lines_part]
         lines += lines_part 
         file.close()
@@ -128,8 +128,8 @@ def similarity_multiple(filenames, cosine_file, cosine_reference, title, extensi
     plt.ylabel("BLOSSUM 62 score")
     plt.xlabel("Cosine similarity")  
     plt.title(title)
-    new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged\\lines_merged_', '').replace('training_validation\\', '')
-    plt.savefig("..\\results\\cosine\\" + new_filename + "_cosine" + extension + ".png", bbox_inches='tight')
+    new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged/lines_merged_', '').replace('training_validation/', '')
+    plt.savefig("../results/cosine/" + new_filename + "_cosine" + extension + ".png", bbox_inches='tight')
     print(np.min(cosine), np.max(cosine), np.mean(cosine), np.std(cosine)) 
     plt.close() 
     retval = title + ";" + str(np.round(np.min(cosine) * 100,3)) + ";" + str(np.round(np.max(cosine) * 100,3)) + ";" + str(np.round(np.mean(cosine) * 100,3)) + ";" + str(np.round(np.std(cosine) * 100,3))  + "\n" 
@@ -193,110 +193,110 @@ ar_outputs_cond_sol2 = np.load('../../output/generated_PCA/ar_outputs_cond_sol2.
 
 output_string_score = "Sequence set;Minimal cosine similarity;Maximal cosine similarityt;Average cosine similarity;Standard deviation\n"
  
-s1 = similarity('lines_merged\\lines_merged_msavae_variants_ORIGINAL.txt', msa_outputs_variants, msa_reference, 'Variants for basic MSA-VAE model')
+s1 = similarity('lines_merged/lines_merged_msavae_variants_ORIGINAL.txt', msa_outputs_variants, msa_reference, 'Variants for basic MSA-VAE model')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_msavae_sol0_variants_ORIGINAL.txt', msa_outputs_sol0_variants, msa_reference, 'Variants for MSA-VAE model trained on low solubility')
+s1 = similarity('lines_merged/lines_merged_msavae_sol0_variants_ORIGINAL.txt', msa_outputs_sol0_variants, msa_reference, 'Variants for MSA-VAE model trained on low solubility')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_msavae_sol1_variants_ORIGINAL.txt', msa_outputs_sol1_variants, msa_reference, 'Variants for MSA-VAE model trained on mid solubility')
+s1 = similarity('lines_merged/lines_merged_msavae_sol1_variants_ORIGINAL.txt', msa_outputs_sol1_variants, msa_reference, 'Variants for MSA-VAE model trained on mid solubility')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_msavae_sol2_variants_ORIGINAL.txt', msa_outputs_sol2_variants, msa_reference, 'Variants for MSA-VAE model trained on high solubility')
-output_string_score += s1
- 
-
-s1 = similarity('lines_merged\\lines_merged_msavae_samples_ORIGINAL.txt', msa_outputs_samples, msa_reference, 'Samples for basic MSA-VAE model')
-output_string_score += s1
- 
-s1 = similarity('lines_merged\\lines_merged_msavae_sol0_samples_ORIGINAL.txt', msa_outputs_sol0_samples, msa_reference,'Samples for MSA-VAE model trained on low solubility')
-output_string_score += s1
- 
-s1 = similarity('lines_merged\\lines_merged_msavae_sol1_samples_ORIGINAL.txt', msa_outputs_sol1_samples, msa_reference,'Samples for MSA-VAE model trained on mid solubility')
-output_string_score += s1
- 
-s1 = similarity('lines_merged\\lines_merged_msavae_sol2_samples_ORIGINAL.txt', msa_outputs_sol2_samples, msa_reference,'Samples for MSA-VAE model trained on high solubility')
+s1 = similarity('lines_merged/lines_merged_msavae_sol2_variants_ORIGINAL.txt', msa_outputs_sol2_variants, msa_reference, 'Variants for MSA-VAE model trained on high solubility')
 output_string_score += s1
  
 
-s1 = similarity('lines_merged\\lines_merged_arvae_variants_ORIGINAL.txt', ar_outputs_variants, ar_reference, 'Variants for basic AR-VAE model')
+s1 = similarity('lines_merged/lines_merged_msavae_samples_ORIGINAL.txt', msa_outputs_samples, msa_reference, 'Samples for basic MSA-VAE model')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_arvae_sol0_variants_ORIGINAL.txt', ar_outputs_sol0_variants, ar_reference, 'Variants for AR-VAE model trained on low solubility')
+s1 = similarity('lines_merged/lines_merged_msavae_sol0_samples_ORIGINAL.txt', msa_outputs_sol0_samples, msa_reference,'Samples for MSA-VAE model trained on low solubility')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_arvae_sol1_variants_ORIGINAL.txt', ar_outputs_sol1_variants, ar_reference, 'Variants for AR-VAE model trained on mid solubility')
+s1 = similarity('lines_merged/lines_merged_msavae_sol1_samples_ORIGINAL.txt', msa_outputs_sol1_samples, msa_reference,'Samples for MSA-VAE model trained on mid solubility')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_arvae_sol2_variants_ORIGINAL.txt', ar_outputs_sol2_variants, ar_reference, 'Variants for AR-VAE model trained on high solubility')
-output_string_score += s1
- 
-
-s1 = similarity('lines_merged\\lines_merged_arvae_samples_ORIGINAL.txt', ar_outputs_samples, ar_reference, 'Samples for basic AR-VAE model')
-output_string_score += s1
- 
-s1 = similarity('lines_merged\\lines_merged_arvae_sol0_samples_ORIGINAL.txt', ar_outputs_sol0_samples, ar_reference,' Samples for AR-VAE model trained on low solubility')
-output_string_score += s1
- 
-s1 = similarity('lines_merged\\lines_merged_arvae_sol1_samples_ORIGINAL.txt', ar_outputs_sol1_samples, ar_reference, 'Samples for AR-VAE model trained on mid solubility')
-output_string_score += s1
- 
-s1 = similarity('lines_merged\\lines_merged_arvae_sol2_samples_ORIGINAL.txt', ar_outputs_sol2_samples, ar_reference, 'Samples for AR-VAE model trained on high solubility')
+s1 = similarity('lines_merged/lines_merged_msavae_sol2_samples_ORIGINAL.txt', msa_outputs_sol2_samples, msa_reference,'Samples for MSA-VAE model trained on high solubility')
 output_string_score += s1
  
 
-s1 = similarity('lines_merged\\lines_merged_msavae_with_conditions_sol0_variants_ORIGINAL.txt', msa_outputs_cond_sol0, msa_reference_cond,'Variants for conditional MSA-VAE model with low solubility')
+s1 = similarity('lines_merged/lines_merged_arvae_variants_ORIGINAL.txt', ar_outputs_variants, ar_reference, 'Variants for basic AR-VAE model')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_msavae_with_conditions_sol1_variants_ORIGINAL.txt', msa_outputs_cond_sol1, msa_reference_cond,'Variants for conditional MSA-VAE model with mid solubility')
+s1 = similarity('lines_merged/lines_merged_arvae_sol0_variants_ORIGINAL.txt', ar_outputs_sol0_variants, ar_reference, 'Variants for AR-VAE model trained on low solubility')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_msavae_with_conditions_sol2_variants_ORIGINAL.txt', msa_outputs_cond_sol2, msa_reference_cond,'Variants for conditional MSA-VAE model with high solubility')
+s1 = similarity('lines_merged/lines_merged_arvae_sol1_variants_ORIGINAL.txt', ar_outputs_sol1_variants, ar_reference, 'Variants for AR-VAE model trained on mid solubility')
+output_string_score += s1
+ 
+s1 = similarity('lines_merged/lines_merged_arvae_sol2_variants_ORIGINAL.txt', ar_outputs_sol2_variants, ar_reference, 'Variants for AR-VAE model trained on high solubility')
 output_string_score += s1
  
 
-s1 = similarity('lines_merged\\lines_merged_arvae_with_conditions_sol0_variants_ORIGINAL.txt', ar_outputs_cond_sol0, ar_reference_cond,'Variants for conditional AR-VAE model with low solubility')
+s1 = similarity('lines_merged/lines_merged_arvae_samples_ORIGINAL.txt', ar_outputs_samples, ar_reference, 'Samples for basic AR-VAE model')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_arvae_with_conditions_sol1_variants_ORIGINAL.txt', ar_outputs_cond_sol1, ar_reference_cond,'Variants for conditional AR-VAE model with mid solubility')
+s1 = similarity('lines_merged/lines_merged_arvae_sol0_samples_ORIGINAL.txt', ar_outputs_sol0_samples, ar_reference,' Samples for AR-VAE model trained on low solubility')
 output_string_score += s1
  
-s1 = similarity('lines_merged\\lines_merged_arvae_with_conditions_sol2_variants_ORIGINAL.txt', ar_outputs_cond_sol2, ar_reference_cond,'Variants for conditional AR-VAE model with high solubility')
+s1 = similarity('lines_merged/lines_merged_arvae_sol1_samples_ORIGINAL.txt', ar_outputs_sol1_samples, ar_reference, 'Samples for AR-VAE model trained on mid solubility')
+output_string_score += s1
+ 
+s1 = similarity('lines_merged/lines_merged_arvae_sol2_samples_ORIGINAL.txt', ar_outputs_sol2_samples, ar_reference, 'Samples for AR-VAE model trained on high solubility')
+output_string_score += s1
+ 
+
+s1 = similarity('lines_merged/lines_merged_msavae_with_conditions_sol0_variants_ORIGINAL.txt', msa_outputs_cond_sol0, msa_reference_cond,'Variants for conditional MSA-VAE model with low solubility')
+output_string_score += s1
+ 
+s1 = similarity('lines_merged/lines_merged_msavae_with_conditions_sol1_variants_ORIGINAL.txt', msa_outputs_cond_sol1, msa_reference_cond,'Variants for conditional MSA-VAE model with mid solubility')
+output_string_score += s1
+ 
+s1 = similarity('lines_merged/lines_merged_msavae_with_conditions_sol2_variants_ORIGINAL.txt', msa_outputs_cond_sol2, msa_reference_cond,'Variants for conditional MSA-VAE model with high solubility')
+output_string_score += s1
+ 
+
+s1 = similarity('lines_merged/lines_merged_arvae_with_conditions_sol0_variants_ORIGINAL.txt', ar_outputs_cond_sol0, ar_reference_cond,'Variants for conditional AR-VAE model with low solubility')
+output_string_score += s1
+ 
+s1 = similarity('lines_merged/lines_merged_arvae_with_conditions_sol1_variants_ORIGINAL.txt', ar_outputs_cond_sol1, ar_reference_cond,'Variants for conditional AR-VAE model with mid solubility')
+output_string_score += s1
+ 
+s1 = similarity('lines_merged/lines_merged_arvae_with_conditions_sol2_variants_ORIGINAL.txt', ar_outputs_cond_sol2, ar_reference_cond,'Variants for conditional AR-VAE model with high solubility')
 output_string_score += s1
  
    
-# s1 = similarity('lines_merged\\lines_merged_PF00296_full.txt', 'Profile of luciferase family')
+# s1 = similarity('lines_merged/lines_merged_PF00296_full.txt', 'Profile of luciferase family')
 # output_string_score += s1
 #  
-s1 = similarity('training_validation\\luxafilt_llmsa_val.fa', ar_outputs, ar_reference, 'Validation data (AR)', '_ar')
+s1 = similarity('training_validation/luxafilt_llmsa_val.fa', ar_outputs, ar_reference, 'Validation data (AR)', '_ar')
 output_string_score += s1
-s1 = similarity('training_validation\\luxafilt_llmsa_val.fa', msa_outputs, msa_reference, 'Validation data (MSA)', '_msa')
+s1 = similarity('training_validation/luxafilt_llmsa_val.fa', msa_outputs, msa_reference, 'Validation data (MSA)', '_msa')
 output_string_score += s1
-s1 = similarity('training_validation\\luxafilt_llmsa_val.fa', ar_outputs_cond, ar_reference_cond, 'Validation data (AR conditional)', '_ar_cond')
+s1 = similarity('training_validation/luxafilt_llmsa_val.fa', ar_outputs_cond, ar_reference_cond, 'Validation data (AR conditional)', '_ar_cond')
 output_string_score += s1
-s1 = similarity('training_validation\\luxafilt_llmsa_val.fa', msa_outputs_cond, msa_reference_cond, 'Validation data (MSA conditional)', '_msa_cond')
+s1 = similarity('training_validation/luxafilt_llmsa_val.fa', msa_outputs_cond, msa_reference_cond, 'Validation data (MSA conditional)', '_msa_cond')
 output_string_score += s1
  
-s1 = similarity('training_validation\\luxafilt_llmsa_train.fa', ar_outputs, ar_reference, 'Training data (AR)', '_ar')
+s1 = similarity('training_validation/luxafilt_llmsa_train.fa', ar_outputs, ar_reference, 'Training data (AR)', '_ar')
 output_string_score += s1
-s1 = similarity('training_validation\\luxafilt_llmsa_train.fa', msa_outputs, msa_reference, 'Training data (MSA)', '_msa') 
+s1 = similarity('training_validation/luxafilt_llmsa_train.fa', msa_outputs, msa_reference, 'Training data (MSA)', '_msa') 
 output_string_score += s1
-s1 = similarity('training_validation\\luxafilt_llmsa_train.fa', ar_outputs_cond, ar_reference_cond, 'Training data (AR conditional)', '_ar_cond')
+s1 = similarity('training_validation/luxafilt_llmsa_train.fa', ar_outputs_cond, ar_reference_cond, 'Training data (AR conditional)', '_ar_cond')
 output_string_score += s1
-s1 = similarity('training_validation\\luxafilt_llmsa_train.fa', msa_outputs_cond, msa_reference_cond, 'Training data (MSA conditional)', '_msa_cond')
+s1 = similarity('training_validation/luxafilt_llmsa_train.fa', msa_outputs_cond, msa_reference_cond, 'Training data (MSA conditional)', '_msa_cond')
 output_string_score += s1
 
-s1 = similarity_multiple(['training_validation\\luxafilt_llmsa_train.fa', 'training_validation\\luxafilt_llmsa_val.fa'], ar_outputs, ar_reference, 'Training and validation data (AR)', '_ar')
+s1 = similarity_multiple(['training_validation/luxafilt_llmsa_train.fa', 'training_validation/luxafilt_llmsa_val.fa'], ar_outputs, ar_reference, 'Training and validation data (AR)', '_ar')
 output_string_score += s1
-s1 = similarity_multiple(['training_validation\\luxafilt_llmsa_train.fa', 'training_validation\\luxafilt_llmsa_val.fa'], msa_outputs, msa_reference, 'Training and validation data (MSA)', '_msa')
+s1 = similarity_multiple(['training_validation/luxafilt_llmsa_train.fa', 'training_validation/luxafilt_llmsa_val.fa'], msa_outputs, msa_reference, 'Training and validation data (MSA)', '_msa')
 output_string_score += s1
-s1 = similarity_multiple(['training_validation\\luxafilt_llmsa_train.fa', 'training_validation\\luxafilt_llmsa_val.fa'], ar_outputs_cond, ar_reference_cond, 'Training and validation data (AR conditional)', '_ar_cond')
+s1 = similarity_multiple(['training_validation/luxafilt_llmsa_train.fa', 'training_validation/luxafilt_llmsa_val.fa'], ar_outputs_cond, ar_reference_cond, 'Training and validation data (AR conditional)', '_ar_cond')
 output_string_score += s1
-s1 = similarity_multiple(['training_validation\\luxafilt_llmsa_train.fa', 'training_validation\\luxafilt_llmsa_val.fa'], msa_outputs_cond, msa_reference_cond, 'Training and validation data (MSA conditional)', '_msa_cond')
+s1 = similarity_multiple(['training_validation/luxafilt_llmsa_train.fa', 'training_validation/luxafilt_llmsa_val.fa'], msa_outputs_cond, msa_reference_cond, 'Training and validation data (MSA conditional)', '_msa_cond')
 output_string_score += s1
  
 
 output_string_score = output_string_score.replace(".", ",")
-file_csv = open("..\\results\\tables\\cosine.csv", "w")
+file_csv = open("../results/tables/cosine.csv", "w")
 file_csv.write(output_string_score)
 file_csv.close()

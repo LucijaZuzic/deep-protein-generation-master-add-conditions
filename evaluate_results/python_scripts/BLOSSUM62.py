@@ -33,7 +33,7 @@ read_matrix()
 
 def similarity(filename,title):
     try:
-        file = open("..\\sequences\\" + filename, 'r')
+        file = open("../sequences/" + filename, 'r')
     except:
         print(filename + "not found")
         return
@@ -66,16 +66,16 @@ def similarity(filename,title):
     plt.xlabel("BLOSSUM 62 score")
     plt.ylabel("Number of sequences")
     plt.title(title)
-    new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged\\lines_merged_', '').replace('training_validation\\', '')
-    plt.savefig("..\\results\\BLOSSUM62\\" + new_filename + "_BLOSSUM62.png", bbox_inches='tight')
+    new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged/lines_merged_', '').replace('training_validation/', '')
+    plt.savefig("../results/BLOSSUM62/" + new_filename + "_BLOSSUM62.png", bbox_inches='tight')
     print(np.min(score), np.max(score), np.mean(score), np.std(score)) 
     plt.close()
     plt.hist(difference)
     plt.xlabel("Probability of relation")
     plt.ylabel("Number of sequences")
     plt.title(title)
-    new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged\\lines_merged_', '').replace('training_validation\\', '')
-    plt.savefig("..\\results\\log_odd\\" + new_filename + "_log_odd.png", bbox_inches='tight')
+    new_filename = filename.replace('_ORIGINAL.txt', '').replace('_ORIGINAL.txt', '').replace('.txt', '').replace('.fa', '').replace('lines_merged/lines_merged_', '').replace('training_validation/', '')
+    plt.savefig("../results/log_odd/" + new_filename + "_log_odd.png", bbox_inches='tight')
     plt.close()
     print(np.min(difference), np.max(difference), np.mean(difference), np.std(difference)) 
     retval = ["",""]
@@ -89,12 +89,12 @@ def similarity_multiple(filenames,title):
     all_names = ""
     for filename in filenames:
         try:
-            file = open("..\\sequences\\" + filename, 'r')
+            file = open("../sequences/" + filename, 'r')
         except:
             print(filename + "not found")
             return
         lines_part = file.readlines()
-        all_names += filename.replace('_ORIGINAL.txt', '_').replace('_ORIGINAL.txt', '_').replace('.txt', '_').replace('.fa', '_').replace('lines_merged\\lines_merged_', '').replace('training_validation\\', '')
+        all_names += filename.replace('_ORIGINAL.txt', '_').replace('_ORIGINAL.txt', '_').replace('.txt', '_').replace('.fa', '_').replace('lines_merged/lines_merged_', '').replace('training_validation/', '')
         lines_part = [line.strip().replace('-', '') for line in lines_part]
         lines += lines_part 
         file.close()
@@ -125,14 +125,14 @@ def similarity_multiple(filenames,title):
     plt.xlabel("BLOSSUM 62 score")
     plt.ylabel("Number of sequences")
     plt.title(title)
-    plt.savefig("..\\results\\BLOSSUM62\\" + all_names + "BLOSSUM62.png", bbox_inches='tight')
+    plt.savefig("../results/BLOSSUM62/" + all_names + "BLOSSUM62.png", bbox_inches='tight')
     print(np.min(score), np.max(score), np.mean(score), np.std(score)) 
     plt.close()
     plt.hist(difference)
     plt.xlabel("Probability of relation")
     plt.ylabel("Number of sequences")
     plt.title(title)
-    plt.savefig("..\\results\\log_odd\\" + all_names + "log_odd.png", bbox_inches='tight')
+    plt.savefig("../results/log_odd/" + all_names + "log_odd.png", bbox_inches='tight')
     plt.close()
     print(np.min(difference), np.max(difference), np.mean(difference), np.std(difference))
     retval = ["",""]
@@ -143,97 +143,97 @@ def similarity_multiple(filenames,title):
 output_string_score = "Sequence set;Minimal BLOSSUM 62 score;Maximal BLOSSUM 62 rezultat;Average BLOSSUM 62 score;Standard deviation\n"
 output_string_difference = "Sequence set;Minimal probability of relation (percentage);Maximal probability of relation (percentage);Average probability of relation (percentage);Standard deviation\n"
  
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_variants_ORIGINAL.txt','Variants for basic MSA-VAE model')
+s1, s2 = similarity('lines_merged/lines_merged_msavae_variants_ORIGINAL.txt','Variants for basic MSA-VAE model')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_sol0_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on low solubility')
+s1, s2 = similarity('lines_merged/lines_merged_msavae_sol0_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on low solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_sol1_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on mid solubility')
+s1, s2 = similarity('lines_merged/lines_merged_msavae_sol1_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on mid solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_sol2_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on high solubility')
-output_string_score += s1
-output_string_difference += s2
-
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_samples_ORIGINAL.txt','Samples for basic MSA-VAE model')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_sol0_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on low solubility')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_sol1_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on mid solubility')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_sol2_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on high solubility')
+s1, s2 = similarity('lines_merged/lines_merged_msavae_sol2_variants_ORIGINAL.txt','Variants for MSA-VAE model trained on high solubility')
 output_string_score += s1
 output_string_difference += s2
 
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_variants_ORIGINAL.txt','Variants for basic AR-VAE model')
+s1, s2 = similarity('lines_merged/lines_merged_msavae_samples_ORIGINAL.txt','Samples for basic MSA-VAE model')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_sol0_variants_ORIGINAL.txt','Variants for AR-VAE model trained on low solubility')
+s1, s2 = similarity('lines_merged/lines_merged_msavae_sol0_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on low solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_sol1_variants_ORIGINAL.txt','Variants for AR-VAE model trained on mid solubility')
+s1, s2 = similarity('lines_merged/lines_merged_msavae_sol1_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on mid solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_sol2_variants_ORIGINAL.txt','Variants for AR-VAE model trained on high solubility')
-output_string_score += s1
-output_string_difference += s2
-
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_samples_ORIGINAL.txt','Samples for basic AR-VAE model')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_sol0_samples_ORIGINAL.txt','Samples for AR-VAE model trained on low solubility')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_sol1_samples_ORIGINAL.txt','Samples for AR-VAE model trained on mid solubility')
-output_string_score += s1
-output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_sol2_samples_ORIGINAL.txt','Samples for AR-VAE model trained on high solubility')
+s1, s2 = similarity('lines_merged/lines_merged_msavae_sol2_samples_ORIGINAL.txt','Samples for MSA-VAE model trained on high solubility')
 output_string_score += s1
 output_string_difference += s2
 
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_with_conditions_sol0_variants_ORIGINAL.txt','Variants for conditional MSA-VAE model with low solubility')
+s1, s2 = similarity('lines_merged/lines_merged_arvae_variants_ORIGINAL.txt','Variants for basic AR-VAE model')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_with_conditions_sol1_variants_ORIGINAL.txt','Variants for conditional MSA-VAE mode with mid solubility')
+s1, s2 = similarity('lines_merged/lines_merged_arvae_sol0_variants_ORIGINAL.txt','Variants for AR-VAE model trained on low solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_msavae_with_conditions_sol2_variants_ORIGINAL.txt','Variants for conditional MSA-VAE mode with high solubility')
+s1, s2 = similarity('lines_merged/lines_merged_arvae_sol1_variants_ORIGINAL.txt','Variants for AR-VAE model trained on mid solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = similarity('lines_merged/lines_merged_arvae_sol2_variants_ORIGINAL.txt','Variants for AR-VAE model trained on high solubility')
 output_string_score += s1
 output_string_difference += s2
 
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_with_conditions_sol0_variants_ORIGINAL.txt','Variants for conditional AR-VAE model with low solubility')
+s1, s2 = similarity('lines_merged/lines_merged_arvae_samples_ORIGINAL.txt','Samples for basic AR-VAE model')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_with_conditions_sol1_variants_ORIGINAL.txt','Variants for conditional AR-VAE mode with mid solubility')
+s1, s2 = similarity('lines_merged/lines_merged_arvae_sol0_samples_ORIGINAL.txt','Samples for AR-VAE model trained on low solubility')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('lines_merged\\lines_merged_arvae_with_conditions_sol2_variants_ORIGINAL.txt','Variants for conditional AR-VAE mode with high solubility')
+s1, s2 = similarity('lines_merged/lines_merged_arvae_sol1_samples_ORIGINAL.txt','Samples for AR-VAE model trained on mid solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = similarity('lines_merged/lines_merged_arvae_sol2_samples_ORIGINAL.txt','Samples for AR-VAE model trained on high solubility')
+output_string_score += s1
+output_string_difference += s2
+
+s1, s2 = similarity('lines_merged/lines_merged_msavae_with_conditions_sol0_variants_ORIGINAL.txt','Variants for conditional MSA-VAE model with low solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = similarity('lines_merged/lines_merged_msavae_with_conditions_sol1_variants_ORIGINAL.txt','Variants for conditional MSA-VAE mode with mid solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = similarity('lines_merged/lines_merged_msavae_with_conditions_sol2_variants_ORIGINAL.txt','Variants for conditional MSA-VAE mode with high solubility')
+output_string_score += s1
+output_string_difference += s2
+
+s1, s2 = similarity('lines_merged/lines_merged_arvae_with_conditions_sol0_variants_ORIGINAL.txt','Variants for conditional AR-VAE model with low solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = similarity('lines_merged/lines_merged_arvae_with_conditions_sol1_variants_ORIGINAL.txt','Variants for conditional AR-VAE mode with mid solubility')
+output_string_score += s1
+output_string_difference += s2
+s1, s2 = similarity('lines_merged/lines_merged_arvae_with_conditions_sol2_variants_ORIGINAL.txt','Variants for conditional AR-VAE mode with high solubility')
 output_string_score += s1
 output_string_difference += s2
    
-s1, s2 = similarity('lines_merged\\lines_merged_PF00296_full.txt', 'Profile of luciferase family') 
+s1, s2 = similarity('lines_merged/lines_merged_PF00296_full.txt', 'Profile of luciferase family') 
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('training_validation\\luxafilt_llmsa_val.fa', 'Validation data')
+s1, s2 = similarity('training_validation/luxafilt_llmsa_val.fa', 'Validation data')
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity('training_validation\\luxafilt_llmsa_train.fa', 'Training data')  
+s1, s2 = similarity('training_validation/luxafilt_llmsa_train.fa', 'Training data')  
 output_string_score += s1
 output_string_difference += s2
-s1, s2 = similarity_multiple(['training_validation\\luxafilt_llmsa_train.fa', 'training_validation\\luxafilt_llmsa_val.fa'], 'Training and validation data')
+s1, s2 = similarity_multiple(['training_validation/luxafilt_llmsa_train.fa', 'training_validation/luxafilt_llmsa_val.fa'], 'Training and validation data')
 output_string_score += s1
 output_string_difference += s2
 
 output_string_score = output_string_score.replace(".", ",")
-file_csv = open("..\\results\\tables\\BLOSSUM62.csv", "w")
+file_csv = open("../results/tables/BLOSSUM62.csv", "w")
 file_csv.write(output_string_score)
 file_csv.close()
 
 output_string_difference = output_string_difference.replace(".", ",")
-file_csv = open("..\\results\\tables\\log_odd.csv", "w")
+file_csv = open("../results/tables/log_odd.csv", "w")
 file_csv.write(output_string_difference)
 file_csv.close()

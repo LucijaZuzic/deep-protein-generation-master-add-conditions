@@ -38,7 +38,7 @@ hydro = {
 
 def sequence_composition(filename, title):
     try:
-        file = open("..\\sequences\\" + filename, 'r') 
+        file = open("../sequences/" + filename, 'r') 
     except:
         return 
     lines = file.readlines()
@@ -71,14 +71,14 @@ def sequence_composition(filename, title):
     plt.xlabel("Charge")
     plt.ylabel("Number of sequences")
     plt.title(title)
-    plt.savefig("..\\results\\sequence_charge\\" + filename.replace('.txt', '_sequence_charge.png').replace('.fa', '_sequence_charge.png').replace('right_padded\\', '').replace('training_validation\\', '').replace('lines_merged\\lines_merged_', ''), bbox_inches='tight')
+    plt.savefig("../results/sequence_charge/" + filename.replace('.txt', '_sequence_charge.png').replace('.fa', '_sequence_charge.png').replace('right_padded/', '').replace('training_validation/', '').replace('lines_merged/lines_merged_', ''), bbox_inches='tight')
     plt.close()
     print("hydro", np.min(new_hydro), np.max(new_hydro), np.mean(new_hydro), np.std(new_hydro))
     plt.hist(new_hydro)
     plt.xlabel("log P")
     plt.ylabel("Number of sequences")
     plt.title(title)
-    plt.savefig("..\\results\\sequence_hydrophobicity\\" + filename.replace('.txt', '_sequence_hydrophobicity.png').replace('.fa', '_sequence_hydrophobicity.png').replace('right_padded\\', '').replace('training_validation\\', '').replace('lines_merged\\lines_merged_', ''), bbox_inches='tight')
+    plt.savefig("../results/sequence_hydrophobicity/" + filename.replace('.txt', '_sequence_hydrophobicity.png').replace('.fa', '_sequence_hydrophobicity.png').replace('right_padded/', '').replace('training_validation/', '').replace('lines_merged/lines_merged_', ''), bbox_inches='tight')
     plt.close()
     number_amino_all = 0
     for amino_acid in all_mino_acids:
@@ -92,7 +92,7 @@ def sequence_composition(filename, title):
     plt.xlabel("Amino acid")
     plt.ylabel("Percentage of occurences in sequence set")
     plt.title(title)
-    plt.savefig("..\\results\\sequence_composition\\" + filename.replace('.txt', '_sequence_composition.png').replace('.fa', '_sequence_composition.png').replace('right_padded\\', '').replace('training_validation\\', '').replace('lines_merged\\lines_merged_', ''), bbox_inches='tight')
+    plt.savefig("../results/sequence_composition/" + filename.replace('.txt', '_sequence_composition.png').replace('.fa', '_sequence_composition.png').replace('right_padded/', '').replace('training_validation/', '').replace('lines_merged/lines_merged_', ''), bbox_inches='tight')
     plt.close()
     file.close()
     retval = ["","",""]
@@ -109,11 +109,11 @@ def sequence_composition_multiple(filenames, title):
     all_names = ""
     for filename in filenames:
         try:
-            file = open("..\\sequences\\" + filename, 'r')
+            file = open("../sequences/" + filename, 'r')
         except:
             return
         lines_part = file.readlines()
-        all_names += filename.replace('.txt', '_').replace('.fa', '_').replace('right_padded\\', '').replace('training_validation\\', '').replace('lines_merged\\lines_merged_', '')
+        all_names += filename.replace('.txt', '_').replace('.fa', '_').replace('right_padded/', '').replace('training_validation/', '').replace('lines_merged/lines_merged_', '')
         lines_part = [line.strip().replace('-', '') for line in lines_part]
         lines += lines_part 
         file.close()
@@ -145,14 +145,14 @@ def sequence_composition_multiple(filenames, title):
     plt.xlabel("Charge")
     plt.ylabel("Number of sequences")
     plt.title(title)
-    plt.savefig("..\\results\\sequence_charge\\" + all_names + "sequence_charge.png", bbox_inches='tight')
+    plt.savefig("../results/sequence_charge/" + all_names + "sequence_charge.png", bbox_inches='tight')
     plt.close()
     print("hydro", np.min(new_hydro), np.max(new_hydro), np.mean(new_hydro), np.std(new_hydro))
     plt.hist(new_hydro)
     plt.xlabel("log P")
     plt.ylabel("Number of sequences")
     plt.title(title)
-    plt.savefig("..\\results\\sequence_hydrophobicity\\" + all_names + "sequence_hydrophobicity.png", bbox_inches='tight')
+    plt.savefig("../results/sequence_hydrophobicity/" + all_names + "sequence_hydrophobicity.png", bbox_inches='tight')
     plt.close()
     number_amino_all = 0
     for amino_acid in all_mino_acids:
@@ -166,7 +166,7 @@ def sequence_composition_multiple(filenames, title):
     plt.xlabel("Amino acid")
     plt.ylabel("Percentage of occurences in sequence set")
     plt.title(title)
-    plt.savefig("..\\results\\sequence_composition\\" + all_names + "sequence_composition.png", bbox_inches='tight')
+    plt.savefig("../results/sequence_composition/" + all_names + "sequence_composition.png", bbox_inches='tight')
     plt.close()
     file.close()
     retval = ["","",""]
@@ -185,128 +185,128 @@ for amino_acid in all_mino_acids:
     output_string_composition += ";" + amino_acid
 output_string_composition += "\n"
 
-s1, s2, s3 = sequence_composition('right_padded\\msavae_variants.fa','Variants for basic MSA-VAE model')
+s1, s2, s3 = sequence_composition('right_padded/msavae_variants.fa','Variants for basic MSA-VAE model')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\msavae_sol0_variants.fa','Variants for MSA-VAE model trained on low solubility')
+s1, s2, s3 = sequence_composition('right_padded/msavae_sol0_variants.fa','Variants for MSA-VAE model trained on low solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\msavae_sol1_variants.fa','Variants for MSA-VAE model trained on mid solubility')
+s1, s2, s3 = sequence_composition('right_padded/msavae_sol1_variants.fa','Variants for MSA-VAE model trained on mid solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\msavae_sol2_variants.fa','Variants for MSA-VAE model trained on high solubility')
+s1, s2, s3 = sequence_composition('right_padded/msavae_sol2_variants.fa','Variants for MSA-VAE model trained on high solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
 
-s1, s2, s3 = sequence_composition('right_padded\\msavae_samples.fa','Samples for basic MSA-VAE model')
+s1, s2, s3 = sequence_composition('right_padded/msavae_samples.fa','Samples for basic MSA-VAE model')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\msavae_sol0_samples.fa','Samples for MSA-VAE model trained on low solubility')
+s1, s2, s3 = sequence_composition('right_padded/msavae_sol0_samples.fa','Samples for MSA-VAE model trained on low solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\msavae_sol1_samples.fa','Samples for MSA-VAE model trained on mid solubility')
+s1, s2, s3 = sequence_composition('right_padded/msavae_sol1_samples.fa','Samples for MSA-VAE model trained on mid solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\msavae_sol2_samples.fa','Samples for MSA-VAE model trained on high solubility')
+s1, s2, s3 = sequence_composition('right_padded/msavae_sol2_samples.fa','Samples for MSA-VAE model trained on high solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
             
-s1, s2, s3 = sequence_composition('right_padded\\arvae_variants.fa','Variants for basic AR-VAE model')
+s1, s2, s3 = sequence_composition('right_padded/arvae_variants.fa','Variants for basic AR-VAE model')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\arvae_sol0_variants.fa','Variants for AR-VAE model trained on low solubility')
+s1, s2, s3 = sequence_composition('right_padded/arvae_sol0_variants.fa','Variants for AR-VAE model trained on low solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\arvae_sol1_variants.fa','Variants for AR-VAE model trained on mid solubility')
+s1, s2, s3 = sequence_composition('right_padded/arvae_sol1_variants.fa','Variants for AR-VAE model trained on mid solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\arvae_sol2_variants.fa','Variants for AR-VAE model trained on high solubility')
-output_string_charged += s1
-output_string_hydro += s2
-output_string_composition += s3
-
-s1, s2, s3 = sequence_composition('right_padded\\arvae_samples.fa','Samples for basic AR-VAE model')
-output_string_charged += s1
-output_string_hydro += s2
-output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\arvae_sol0_samples.fa','Samples for AR-VAE model trained on low solubility')
-output_string_charged += s1
-output_string_hydro += s2
-output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\arvae_sol1_samples.fa','Samples for AR-VAE model trained on mid solubility')
-output_string_charged += s1
-output_string_hydro += s2
-output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\arvae_sol2_samples.fa','Samples for AR-VAE model trained on high solubility')
+s1, s2, s3 = sequence_composition('right_padded/arvae_sol2_variants.fa','Variants for AR-VAE model trained on high solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
 
-s1, s2, s3 = sequence_composition('right_padded\\msavae_with_conditions_sol0_variants.fa','Variants for conditional MSA-VAE model with low solubility')
+s1, s2, s3 = sequence_composition('right_padded/arvae_samples.fa','Samples for basic AR-VAE model')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\msavae_with_conditions_sol1_variants.fa','Variants for conditional MSA-VAE model with mid solubility')
+s1, s2, s3 = sequence_composition('right_padded/arvae_sol0_samples.fa','Samples for AR-VAE model trained on low solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\msavae_with_conditions_sol2_variants.fa','Variants for conditional MSA-VAE model with high solubility')
+s1, s2, s3 = sequence_composition('right_padded/arvae_sol1_samples.fa','Samples for AR-VAE model trained on mid solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-
-s1, s2, s3 = sequence_composition('right_padded\\arvae_with_conditions_sol0_variants.fa','Variants for conditional AR-VAE model with low solubility')
-output_string_charged += s1
-output_string_hydro += s2
-output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\arvae_with_conditions_sol1_variants.fa','Variants for conditional AR-VAE model with mid solubility')
-output_string_charged += s1
-output_string_hydro += s2
-output_string_composition += s3
-s1, s2, s3 = sequence_composition('right_padded\\arvae_with_conditions_sol2_variants.fa','Variants for conditional AR-VAE model with high solubility')
+s1, s2, s3 = sequence_composition('right_padded/arvae_sol2_samples.fa','Samples for AR-VAE model trained on high solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
 
-s1, s2, s3 = sequence_composition('lines_merged\\lines_merged_PF00296_full.txt', 'Profile of luciferase family')
+s1, s2, s3 = sequence_composition('right_padded/msavae_with_conditions_sol0_variants.fa','Variants for conditional MSA-VAE model with low solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('training_validation\\ll_val.fa', 'Validation data')
+s1, s2, s3 = sequence_composition('right_padded/msavae_with_conditions_sol1_variants.fa','Variants for conditional MSA-VAE model with mid solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition('training_validation\\ll_train.fa', 'Training data')  
+s1, s2, s3 = sequence_composition('right_padded/msavae_with_conditions_sol2_variants.fa','Variants for conditional MSA-VAE model with high solubility')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
-s1, s2, s3 = sequence_composition_multiple(['training_validation\\ll_train.fa', 'training_validation\\ll_val.fa'], 'Training and validation data')
+
+s1, s2, s3 = sequence_composition('right_padded/arvae_with_conditions_sol0_variants.fa','Variants for conditional AR-VAE model with low solubility')
+output_string_charged += s1
+output_string_hydro += s2
+output_string_composition += s3
+s1, s2, s3 = sequence_composition('right_padded/arvae_with_conditions_sol1_variants.fa','Variants for conditional AR-VAE model with mid solubility')
+output_string_charged += s1
+output_string_hydro += s2
+output_string_composition += s3
+s1, s2, s3 = sequence_composition('right_padded/arvae_with_conditions_sol2_variants.fa','Variants for conditional AR-VAE model with high solubility')
+output_string_charged += s1
+output_string_hydro += s2
+output_string_composition += s3
+
+s1, s2, s3 = sequence_composition('lines_merged/lines_merged_PF00296_full.txt', 'Profile of luciferase family')
+output_string_charged += s1
+output_string_hydro += s2
+output_string_composition += s3
+s1, s2, s3 = sequence_composition('training_validation/ll_val.fa', 'Validation data')
+output_string_charged += s1
+output_string_hydro += s2
+output_string_composition += s3
+s1, s2, s3 = sequence_composition('training_validation/ll_train.fa', 'Training data')  
+output_string_charged += s1
+output_string_hydro += s2
+output_string_composition += s3
+s1, s2, s3 = sequence_composition_multiple(['training_validation/ll_train.fa', 'training_validation/ll_val.fa'], 'Training and validation data')
 output_string_charged += s1
 output_string_hydro += s2
 output_string_composition += s3
 
 output_string_hydro = output_string_hydro.replace(".", ",")
-file_csv = open("..\\results\\tables\\sequence_hydrophobicity.csv", "w")
+file_csv = open("../results/tables/sequence_hydrophobicity.csv", "w")
 file_csv.write(output_string_hydro)
 file_csv.close()
 
 output_string_charged = output_string_charged.replace(".", ",")
-file_csv = open("..\\results\\tables\\sequence_charge.csv", "w")
+file_csv = open("../results/tables/sequence_charge.csv", "w")
 file_csv.write(output_string_charged)
 file_csv.close()
 
 output_string_composition = output_string_composition.replace(".", ",")
-file_csv = open("..\\results\\tables\\sequence_composition.csv", "w")
+file_csv = open("../results/tables/sequence_composition.csv", "w")
 file_csv.write(output_string_composition)
 file_csv.close()

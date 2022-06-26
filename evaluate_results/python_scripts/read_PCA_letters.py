@@ -47,7 +47,7 @@ def letter_score(scores, name):
     plt.ylabel("BLOSSUM62 score")
     plt.xlabel("Cosine similarity")  
     plt.title("Amino acid pairs")  
-    plt.savefig("..\\results\\cosine\\" + name + "_cosine_letter.png", bbox_inches='tight') 
+    plt.savefig("../results/cosine/" + name + "_cosine_letter.png", bbox_inches='tight') 
     plt.close() 
               
 msa_outputs_aaletters = np.load('../../output/generated_PCA/msa_outputs_aaletters.npy')[0]

@@ -8,7 +8,7 @@ import numpy as np
 
 def get_three_bins(filename, bin_size_equal = False, limit1 = None, limit2 = None):
     try:    
-        file = open("..\\sequences\\seq_prediction\\" + filename, 'r')
+        file = open("../sequences/seq_prediction/" + filename, 'r')
     except:
         return
     print("getting bins")
@@ -55,7 +55,7 @@ def get_three_bins_multiple_files(filenames,  bin_size_equal = False, limit1 = N
     print("getting multiple file bins")
     for filename in filenames:
         try:    
-            file = open("..\\sequences\\seq_prediction\\" + filename, 'r')
+            file = open("../sequences/seq_prediction/" + filename, 'r')
         except:
             return
         print(filename)
@@ -100,19 +100,19 @@ def write_bins(bins, filename_aligned, filename_unaligned):
     print("writing bins")
     print(filename_aligned, filename_unaligned)
     try:
-        all_sequences_aligned = open("..\\sequences\\training_validation\\" + filename_aligned + ".fa", 'r')
+        all_sequences_aligned = open("../sequences/training_validation/" + filename_aligned + ".fa", 'r')
     except:
         return
     lines_aligned = all_sequences_aligned.readlines()
     try:
-        all_sequences_unaligned = open("..\\sequences\\training_validation\\" + filename_unaligned + ".fa", 'r')
+        all_sequences_unaligned = open("../sequences/training_validation/" + filename_unaligned + ".fa", 'r')
     except:
         return
     lines_unaligned = all_sequences_unaligned.readlines()
     for bin_num in range(len(bins)):
         bin_write = bins[bin_num]
-        file_aligned = open("..\\sequences\\training_validation\\" + filename_aligned + "_sol" + str(bin_num) + ".fa", 'w')
-        file_unaligned = open("..\\sequences\\training_validation\\" + filename_unaligned + "_sol" + str(bin_num) + ".fa", 'w')
+        file_aligned = open("../sequences/training_validation/" + filename_aligned + "_sol" + str(bin_num) + ".fa", 'w')
+        file_unaligned = open("../sequences/training_validation/" + filename_unaligned + "_sol" + str(bin_num) + ".fa", 'w')
         data_write_aligned = ""
         data_write_unaligned = ""
         print(len(bin_write))
@@ -135,7 +135,7 @@ def write_bins(bins, filename_aligned, filename_unaligned):
 
 def get_number_bins(filename, bin_size_equal = False, limit1 = None, limit2 = None):
     try:    
-        file = open("..\\sequences\\seq_prediction\\" + filename, 'r')
+        file = open("../sequences/seq_prediction/" + filename, 'r')
     except:
         return
     print("getting and writing conditions")
@@ -175,7 +175,7 @@ def get_number_bins(filename, bin_size_equal = False, limit1 = None, limit2 = No
     print(bin2_start, bin3_start) 
     print(string_bin.count("0"), string_bin.count("1"), string_bin.count("2"))
     file.close()
-    file_conditions = open("..\\sequences\\training_validation\\" + filename.replace('seq_prediction', 'conditions'), 'w')
+    file_conditions = open("../sequences/training_validation/" + filename.replace('seq_prediction', 'conditions'), 'w')
     file_conditions.write(string_bin)
     file_conditions.close() 
     
